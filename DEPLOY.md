@@ -8,7 +8,7 @@
 - `overview-2026-08-17.md` —— 交付说明
 
 ## 部署前必做（已完成 ✅）
-- 已将 `index.html` 中占位域名 `wking.example.com` 替换为实际 GitHub Pages 地址 `https://wking.github.io/WKing/`（canonical / OG / JSON-LD 已同步）。
+- 已将 `index.html` 中占位域名 `wking.example.com` 替换为实际 GitHub Pages 地址 `https://wking-jj.github.io/WKing/`（canonical / OG / JSON-LD 已同步）。
 - 若之后改用自定义域名，只需把上述地址改为你的域名即可。
 
 ## 方式一：GitHub Pages（推荐，免费）
