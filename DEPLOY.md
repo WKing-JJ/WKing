@@ -15,6 +15,7 @@
 
 > 你的账号信息已写死：**用户名 `WKing-JJ`**、**仓库名 `WKing`**、**公开网址 `https://wking-jj.github.io/WKing/`**。
 > 下面每一步都标了"点哪里 / 填什么 / 注意什么"，跟着点就行。
+> 💡 **怕敲命令？直接跳到下方「零命令图形界面版：用 GitHub Desktop」**，全程鼠标点，不用输任何命令。
 
 ### 第①步：在 GitHub 新建仓库（网页操作）
 1. 打开浏览器，登录 <https://github.com>（用 `WKing-JJ` 账户）。
@@ -101,6 +102,25 @@ GitHub Pages 会自动重新发布，**不用再进设置**。大约 1 分钟后
 （注意：`git push` 的 PAT 在 Windows 上通常会被凭据管理器记住一段时间，短期不用每次重填。）
 
 > 若仓库名不是 `WKing` 而是别的，相对链接（`reports/...`、页内锚点）依然有效，无需改代码；只是网址会变成 `wking-jj.github.io/<你的仓库名>/`，同时记得同步改 `index.html` 里的域名与 `origin` 地址。
+
+### 🖱️ 零命令图形界面版：用 GitHub Desktop（新手首选，不用敲任何命令）
+如果你在上面的命令行步骤卡住了（打不开 Git Bash、路径报错、粘贴不生效等），**直接用 GitHub Desktop 即可**，全程鼠标点击：
+
+1. **下载安装**：浏览器打开 <https://desktop.github.com/> → 点 **Download for Windows** → 双击安装包安装 → 打开后用 GitHub 账户 **`WKing-JJ`** 登录（按提示授权一次）。
+2. **添加本地仓库**：顶部菜单 **File → Add Local Repository…**（中文：文件 → 添加本地仓库）→ 点 **Choose…**（选择…）→ 选中文件夹 **`D:\wangrlly\Documents\wordbuddy\wking-site`** → 点 **Add Repository**。
+   - 这个文件夹我们已经初始化好 Git 仓库、也设好了远端 `origin`，Desktop 会直接识别，无需任何配置。
+3. **推送上网**：界面左侧会列出你本地的 4 个提交。点击右上角的 **Publish branch**（发布分支）或 **Push origin**（推送）。
+   - 若弹出"选择发布位置"：确认账户是 **`WKing-JJ`**、仓库名 **`WKing`**、可见性选 **Public**，再点 **Publish**。
+4. 等进度条走完，打开 <https://github.com/WKing-JJ/WKing> 就能看到代码已经上去了。
+5. 然后照常做 **第④步（Settings → Pages）** 开启网站即可（见上）。
+
+> 以后更新：在 GitHub Desktop 里改完文件 → 左下角写一句摘要 → 点 **Commit to main** → 点 **Push origin**，网站自动更新，全程不用命令行。
+
+### 命令行版排错（如果你仍想用命令）
+- **打不开 Git Bash**：开始菜单搜 "Git Bash"；若搜不到，说明没装 Git → 去 <https://git-scm.com/> 下载安装（一路 Next），装完重开菜单即可。
+- **路径报错 `cd: no such file`**：在 Git Bash 里必须用 **`/d/wangrlly/...`**（斜杠、盘符前加 `/`）；若你在 **PowerShell**，则用 **`D:\wangrlly\...`**（反斜杠）。两者语法不同，不要混用。
+- **逐行执行的正确做法**：一次只粘**一行**并回车，不要两行一起粘。第一行 `cd ...` 回车后，再粘第二行 `git push ...` 回车。
+- **push 要填的"密码"**：弹窗里用户名 `WKing-JJ`、**密码栏粘 PAT（`ghp_...`）不是账户密码**（见上"生成 PAT"一节）。
 
 ## 方式二：Vercel（零配置，免费）
 1. 登录 vercel.com → **Add New → Project** → 导入含本目录的 Git 仓库；或直接拖拽本目录到 Vercel「Deploy」。
