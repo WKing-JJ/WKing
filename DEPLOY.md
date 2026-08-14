@@ -11,14 +11,96 @@
 - 已将 `index.html` 中占位域名 `wking.example.com` 替换为实际 GitHub Pages 地址 `https://wking-jj.github.io/WKing/`（canonical / OG / JSON-LD 已同步）。
 - 若之后改用自定义域名，只需把上述地址改为你的域名即可。
 
-## 方式一：GitHub Pages（推荐，免费）
-1. 在 GitHub 新建仓库（如 `wking`），把本目录全部内容推送为仓库根。
-2. 仓库 **Settings → Pages → Build and deployment → Source** 选 **Deploy from a branch**。
-3. Branch 选 `main` / `master`，目录选 `/ (root)`，保存。
-4. 约 1 分钟后访问 `https://<用户名>.github.io/<仓库名>/`。
-5. 之后每次 `git push` 即自动更新（无需构建）。
+## 方式一：GitHub Pages（推荐，免费，保姆级）
 
-> 若仓库名不是 `wking`，相对链接（`reports/...`、页内锚点）依然有效，无需改动。
+> 你的账号信息已写死：**用户名 `WKing-JJ`**、**仓库名 `WKing`**、**公开网址 `https://wking-jj.github.io/WKing/`**。
+> 下面每一步都标了"点哪里 / 填什么 / 注意什么"，跟着点就行。
+
+### 第①步：在 GitHub 新建仓库（网页操作）
+1. 打开浏览器，登录 <https://github.com>（用 `WKing-JJ` 账户）。
+2. 右上角头像左侧有个 **＋（加号）** 图标 → 点它 → 选 **New repository（新建仓库）**。
+3. 进入新建页面，按下面填：
+   - **Repository name（仓库名）**：填 `WKing`（必须一模一样，网址才是 `wking-jj.github.io/WKing`）。
+   - **Description（描述）**：可留空，或填"WKing 个人资讯站"。
+   - **Public / Private**：务必选 **Public（公开）**——Pages 免费托管只支持公开仓库。
+   - ⚠️ **Important（重要）**：下方三个勾选框 **Initialize this repository with（初始化）** 区域里的
+     - ☐ Add a README file
+     - ☐ Add .gitignore
+     - ☐ Choose a license
+     这三项 **全部不要勾**（我们的本地仓库已经有文件，勾了会冲突导致推不上去）。
+4. 点最下方的绿色按钮 **Create repository（创建仓库）**。
+5. 创建成功后会进入一个空仓库页面（显示"quick setup"之类），**不用管它上面的命令**，直接进行第②步。
+
+### 第②步：生成访问令牌 PAT（只需做一次）
+`git push` 时"密码"那栏要填的不是你的 GitHub 登录密码，而是一串 **Personal Access Token（个人访问令牌，简称 PAT）**。
+1. 点 GitHub 右上角**头像** → **Settings（设置）**。
+2. 左侧最下方 **Developer settings（开发者设置）** → **Personal access tokens** → **Tokens (classic)**。
+3. 点 **Generate new token（生成新令牌）** → 再点 **Generate new token (classic)**。
+4. 填写表单：
+   - **Note（备注）**：填 `wking-push`（随便记，方便认）。
+   - **Expiration（过期时间）**：选 **90 days**（90 天）或 **No expiration（不过期）** 都行；选不过期的话以后不用重做这步。
+   - **Select scopes（权限勾选）**：找到 **`repo`** 这一大项，把它的复选框 **勾上（包含下面所有子项）**。这是推送代码必需的最小权限。
+   - 其余权限**不用勾**。
+5. 页面最底部点绿色 **Generate token（生成令牌）**。
+6. 生成后会显示一长串 **`ghp_xxxxxxxxxxxxxxxx`** 的字符——**这是唯一一次显示机会，立刻复制保存好**（可先粘到记事本）。如果丢了只能重新生成一个。
+
+### 第③步：把本地代码推送到 GitHub（在你自己电脑上执行）
+> 注意：下面命令要在**你自己的 Windows 电脑**上跑（我们目前的运行环境连不上 github.com，必须由你的电脑出网）。
+
+**方式 A：用 Git Bash（推荐新手）**
+1. 打开 **Git Bash**（装了 Git 就有；开始菜单搜 "Git Bash"）。
+2. 进入站点目录，逐行粘贴执行：
+   ```bash
+   cd /d/wangrlly/Documents/wordbuddy/wking-site
+   git push -u origin main
+   ```
+3. 第一次推送会弹出登录框：
+   - **Username（用户名）**：填 `WKing-JJ`
+   - **Password（密码）**：**粘贴第②步复制的 PAT（`ghp_...` 那串）**，不是你的账户密码！
+   - 提示：Git Bash 里粘贴是 **右键 → Paste**（或 Shift+Insert）；输入密码时屏幕**不会显示任何字符**，这是正常的，粘完直接回车。
+4. 看到类似 `Enumerating objects...` `To https://github.com/WKing-JJ/WKing.git` `branch 'main' set up to track 'origin/main'` 和 `done.` 就成功了。
+
+**方式 B：用 PowerShell / 终端（如果 Git Bash 没有）**
+1. 打开 **PowerShell**（开始菜单搜 PowerShell）。
+2. 逐行执行：
+   ```powershell
+   cd D:\wangrlly\Documents\wordbuddy\wking-site
+   git push -u origin main
+   ```
+3. 弹窗（或命令行）要求登录时，用户名填 `WKing-JJ`，密码填 **PAT（不是账户密码）**。
+4. 若弹出的是 GitHub 网页登录窗口：用 `WKing-JJ` 登录即可，登录成功会自动继续推送。
+
+**常见失败与处理**
+- ❌ `remote: Repository not found` / `could not read Username`：仓库还没建好（先回第①步），或仓库名/用户名拼错（应为 `WKing-JJ/WKing`）。
+- ❌ `Permission denied (403)`：密码栏填成了账户密码，或 PAT 没勾 `repo` 权限——重做第②步生成 PAT。
+- ❌ `failed to resolve host` / 一直转圈：电脑没联网，或公司网络屏蔽了 github.com。
+- ❌ `Updates were rejected because the remote contains work`：你建仓库时勾了 README 等文件——删掉重建成空仓库（第①步），再推。
+
+### 第④步：开启 GitHub Pages（网页操作）
+1. 推送成功后，打开仓库页面 <https://github.com/WKing-JJ/WKing>。
+2. 点仓库顶部导航栏的 **Settings（设置）**（最右侧齿轮图标）。
+3. 左侧菜单找 **Pages**（可能在 "Code and automation" 分组下，往下滚）。
+4. 在 **Build and deployment** 区域：
+   - **Source（来源）**：选 **Deploy from a branch（从分支部署）**。
+   - **Branch（分支）**：点下拉选 **`main`**（我们用的就是 main）。
+   - **Directory（目录）**：选 **`/ (root)`**（根目录，因为 `index.html` 在根）。
+5. 点 **Save（保存）**。
+6. 页面会出现一行提示："Your site is being built..."（正在构建）。**等约 1 分钟**（首次可能 1–3 分钟）。
+7. 回到 **Settings → Pages**，顶部会显示绿色对勾 + 你的公开网址：
+   **https://wking-jj.github.io/WKing/**
+8. 浏览器打开这个网址，就能看到 WKing 站点了 🎉。
+
+### 第⑤步：以后怎么更新
+改完内容（比如改了 `index.html`）后，只需在你电脑的该目录执行三行：
+```bash
+git add -A
+git commit -m "更新说明"
+git push
+```
+GitHub Pages 会自动重新发布，**不用再进设置**。大约 1 分钟后刷新网址即可看到新内容。
+（注意：`git push` 的 PAT 在 Windows 上通常会被凭据管理器记住一段时间，短期不用每次重填。）
+
+> 若仓库名不是 `WKing` 而是别的，相对链接（`reports/...`、页内锚点）依然有效，无需改代码；只是网址会变成 `wking-jj.github.io/<你的仓库名>/`，同时记得同步改 `index.html` 里的域名与 `origin` 地址。
 
 ## 方式二：Vercel（零配置，免费）
 1. 登录 vercel.com → **Add New → Project** → 导入含本目录的 Git 仓库；或直接拖拽本目录到 Vercel「Deploy」。
