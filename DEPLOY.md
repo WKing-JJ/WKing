@@ -7,11 +7,9 @@
 - `reports/` —— 四份 PPT 式周报（相对路径引用，随站点一起上传即可）
 - `overview-2026-08-17.md` —— 交付说明
 
-## 部署前必做（1 处）
-把 `index.html` 里的占位域名换成你的真实域名（否则分享卡片/SEO 会指向示例地址）：
-- `<link rel="canonical" href="https://wking.example.com/">`
-- `<meta property="og:...">` 与 JSON-LD 中的 `url` 字段
-- 如不需要，也可保留占位，不影响页面正常运行。
+## 部署前必做（已完成 ✅）
+- 已将 `index.html` 中占位域名 `wking.example.com` 替换为实际 GitHub Pages 地址 `https://wking.github.io/WKing/`（canonical / OG / JSON-LD 已同步）。
+- 若之后改用自定义域名，只需把上述地址改为你的域名即可。
 
 ## 方式一：GitHub Pages（推荐，免费）
 1. 在 GitHub 新建仓库（如 `wking`），把本目录全部内容推送为仓库根。
