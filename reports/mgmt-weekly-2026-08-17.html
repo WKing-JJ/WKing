@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>管理技能 第001期：激励与坏消息沟通的落地施策（2026-08-17）| WKing</title>
+<meta name="description" content="把期望理论与公平理论压缩成一张可执行的激励设计表；给出坏消息沟通的 BLUF+SCQA 话术模板。附 2 个实际案例：整车厂产能爬坡期班组激励（脱敏改写）、本田在华下放研发决策权的组织进化解读（公开报道）。">
+<meta name="keywords" content="激励设计,期望理论,公平理论,坏消息沟通,BLUF,SCQA,组织管理,经营管理,管理案例,绩效设计">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="管理技能 第001期：激励与坏消息沟通——产能波动期的两个硬场景">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2410C'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Report","headline":"管理技能 第001期：激励与坏消息沟通的落地施策","datePublished":"2026-08-17T08:00:00+08:00","inLanguage":"zh-CN","author":{"@type":"Person","name":"WKing"},"about":["激励设计","沟通管理","组织进化"]}
+</script>
+<style>
+:root{
+  --bg:#F3F0EC; --ink:#0E1726; --ink-2:#4A5568; --ink-3:#8A94A6; --line:#E7E3DE; --line-2:#F3F0EC;
+  --c:#C2410C; --cs:#FEF1E9; --cd:#7C2D12; --up:#D92D20; --dn:#079455; --wa:#B54708; --wasoft:#FFFAEB;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);overflow:hidden}
+button{font-family:inherit;cursor:pointer}
+.ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.ic-s{width:15px;height:15px}
+.bar{position:fixed;left:0;right:0;height:52px;display:flex;align-items:center;gap:10px;padding:0 16px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);z-index:50;border-bottom:1px solid var(--line)}
+.bar.top{top:0}
+.bar.bot{bottom:0;border-bottom:0;border-top:1px solid var(--line)}
+.tag{display:inline-flex;align-items:center;gap:6px;background:var(--cs);color:var(--c);font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.tt{font-size:13.5px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp{flex:1}
+.cbtn{min-width:38px;height:38px;padding:0 11px;border:1px solid var(--line);background:#fff;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--ink-2);font-size:13px;font-weight:700;transition:.16s;text-decoration:none}
+.cbtn:hover{border-color:var(--c);color:var(--c)}
+.cbtn.p{background:var(--cd);color:#fff;border-color:transparent}
+.pg{font-size:13px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink-2);min-width:56px;text-align:center}
+#pbar{position:fixed;left:0;bottom:52px;height:3px;background:linear-gradient(90deg,var(--c),#F79009);width:0;z-index:51;transition:width .25s}
+.viewport{position:fixed;inset:52px 0;display:grid;place-items:center;overflow:hidden}
+.stage{width:1280px;height:720px;position:relative;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(124,45,18,.16);overflow:hidden;transform-origin:center center}
+.slide{position:absolute;inset:0;padding:44px 56px 52px;display:flex;flex-direction:column;opacity:0;transform:translateX(26px);transition:opacity .3s,transform .3s;pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.sn{position:absolute;right:26px;bottom:16px;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--c);text-transform:uppercase}
+.s-title{font-size:31px;font-weight:800;letter-spacing:-.6px;line-height:1.25;margin:6px 0 4px}
+.s-sub{font-size:15px;color:var(--ink-2);line-height:1.6}
+.hr{height:1px;background:var(--line);margin:16px 0}
+.body{flex:1;min-height:0}
+.src{margin-top:auto;padding-top:12px;font-size:11.6px;color:var(--ink-3);line-height:1.6;border-top:1px dashed var(--line)}
+.src b{color:var(--ink-2);font-weight:750}
+.cover{background:linear-gradient(145deg,#7C2D12 0%,#9A3412 50%,#C2410C 100%);color:#fff;justify-content:center;padding:0 74px}
+.cover .eyebrow{color:#FDD9AF}
+.cover h1{font-size:45px;font-weight:800;line-height:1.22;letter-spacing:-1.1px;margin:14px 0 18px;max-width:960px}
+.cover .lead{font-size:17px;color:rgba(255,255,255,.87);max-width:820px;line-height:1.75}
+.cover .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:32px;font-size:13.5px;color:rgba(255,255,255,.8)}
+.cover .meta i{display:flex;align-items:center;gap:7px;font-style:normal}
+.cover .kv{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.cover .kv div{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:11px 15px}
+.cover .kv b{display:block;font-size:16px;font-weight:800}
+.cover .kv span{font-size:11.8px;color:rgba(255,255,255,.74)}
+.wm{position:absolute;right:-70px;bottom:-90px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 66%)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;height:100%}
+.g2.a{grid-template-columns:.95fr 1.05fr}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:#FDFBF9;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card.hi{background:var(--cs);border-color:#FBD3B4}
+.card h4{font-size:15px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.card p{font-size:13.4px;color:var(--ink-2);line-height:1.72}
+.card p+p{margin-top:7px}
+ul.bl{list-style:none;display:flex;flex-direction:column;gap:11px}
+ul.bl li{display:flex;gap:11px;font-size:14.2px;line-height:1.7;color:var(--ink-2)}
+ul.bl li b{color:var(--ink)}
+ul.bl .num{flex:0 0 auto;width:23px;height:23px;border-radius:7px;background:var(--cd);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center;margin-top:3px}
+ul.bl.dot .num{background:var(--cs);color:var(--c)}
+table.tbl{width:100%;border-collapse:collapse;font-size:12.8px}
+table.tbl th{background:#FBF6F2;color:var(--ink-2);font-size:11.6px;font-weight:800;text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+table.tbl td{padding:9px 10px;border-bottom:1px solid var(--line-2);color:var(--ink-2);vertical-align:top}
+table.tbl tr:last-child td{border-bottom:0}
+table.tbl td b{color:var(--ink)}
+.callout{background:var(--wasoft);border:1px solid #FEDF89;border-radius:12px;padding:13px 15px;font-size:13.4px;color:#93370D;line-height:1.7;display:flex;gap:10px}
+.callout svg{color:var(--wa);margin-top:2px}
+.callout.ok{background:#ECFDF3;border-color:#A6F4C5;color:#054F31}
+.callout.ok svg{color:var(--dn)}
+.chart{width:100%;height:auto}
+.quote{background:#FBF6F2;border-left:4px solid var(--c);border-radius:0 12px 12px 0;padding:13px 16px;font-size:13.6px;color:var(--ink-2);line-height:1.75}
+.quote b{color:var(--ink)}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:800;background:var(--cs);color:var(--c)}
+.badge.gray{background:#F2F4F7;color:var(--ink-2)}
+.srclist{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.srci{background:#FDFBF9;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:12.6px;color:var(--ink-2);line-height:1.65}
+.srci strong{display:block;font-size:13.2px;color:var(--ink);font-weight:750;margin-bottom:2px}
+.mask{position:fixed;inset:0;background:rgba(28,16,10,.45);z-index:60;opacity:0;pointer-events:none;transition:.22s}
+.mask.on{opacity:1;pointer-events:auto}
+.toc{position:fixed;left:0;top:0;height:100%;width:min(340px,88vw);background:#fff;z-index:70;transform:translateX(-102%);transition:transform .26s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+.toc.on{transform:none}
+.toc-h{padding:16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:9px}
+.toc-h h3{font-size:16px;font-weight:800;flex:1}
+.toc-b{overflow-y:auto;padding:10px}
+.ti{display:flex;gap:10px;padding:10px 11px;border-radius:9px;font-size:13.4px;color:var(--ink-2);cursor:pointer;align-items:center}
+.ti:hover{background:#FBF6F2}
+.ti.on{background:var(--cs);color:var(--c);font-weight:750}
+.ti span.i{width:22px;height:22px;border-radius:6px;background:#F3F0EC;font-size:11.5px;font-weight:800;display:grid;place-items:center;flex:0 0 auto}
+.ti.on span.i{background:#fff;color:var(--c)}
+body.doc{overflow:auto;background:#F7F5F2}
+body.doc .viewport{position:static;inset:auto;display:block;overflow:visible;padding:62px 0 66px}
+body.doc .stage{width:auto;max-width:820px;margin:0 auto;height:auto;transform:none!important;border-radius:0;box-shadow:none;background:transparent}
+body.doc .slide{position:relative;inset:auto;opacity:1;transform:none;pointer-events:auto;background:#fff;border:1px solid var(--line);border-radius:14px;margin:0 12px 12px;padding:20px 17px 22px;min-height:0}
+body.doc .sn{position:static;text-align:right;margin-top:10px}
+body.doc .s-title{font-size:21px;letter-spacing:-.3px}
+body.doc .s-sub{font-size:13.6px}
+body.doc .cover{padding:26px 20px;border-radius:14px}
+body.doc .cover h1{font-size:24px;letter-spacing:-.3px}
+body.doc .cover .lead{font-size:14px}
+body.doc .cover .meta{gap:12px;font-size:12.2px;margin-top:18px}
+body.doc .g2,body.doc .g2.a,body.doc .g3,body.doc .g4,body.doc .srclist{grid-template-columns:1fr;gap:11px;height:auto}
+body.doc ul.bl li{font-size:13.8px}
+body.doc table.tbl{font-size:12px}
+body.doc table.tbl th,body.doc table.tbl td{padding:7px 8px}
+body.doc .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+body.doc #pbar{display:none}
+body.doc .navb{display:none}
+body.doc .bar.bot{justify-content:center;padding-bottom:env(safe-area-inset-bottom)}
+@media print{
+  @page{size:A4 landscape;margin:0}
+  body{background:#fff;overflow:visible}
+  .bar,#pbar,.toc,.mask{display:none!important}
+  .viewport{position:static;inset:auto;display:block;overflow:visible}
+  .stage{width:1280px;height:auto;box-shadow:none;border-radius:0;transform:none!important}
+  .slide{position:relative;inset:auto;opacity:1;transform:none;height:720px;page-break-after:always;break-after:page;border:0}
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 0 1 6 3.5h13V19H6a2 2 0 0 0-2 2z"/><path d="M19 15.5H6a2 2 0 0 0-2 2"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-l" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+<symbol id="i-r" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3.5h10V8"/><rect x="4" y="8" width="16" height="8" rx="2"/><path d="M7 14h10v6.5H7z"/></symbol>
+<symbol id="i-full" viewBox="0 0 24 24"><path d="M4 9V4h5M20 15v5h-5M15 4h5v5M9 20H4v-5"/></symbol>
+<symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4 2.8 20h18.4z"/><path d="M12 10v4M12 17h.01"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M13.5 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10A1.5 1.5 0 0 0 18.5 19V8.5z"/><path d="M13.5 3.5v5h5"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.8V18h7v-4.2A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12S18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.7"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20c1.2-3.2 3.6-4.8 6.2-4.8s5 1.6 6.2 4.8"/><path d="M16.5 5.2a3.4 3.4 0 0 1 0 6.6"/><path d="M18 15.6c2 .6 3.4 2.1 4.2 4.4"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 1 1-4.2-7.3"/><path d="M20.5 4.5v4.2h-4.2"/><path d="M8 11h8M8 14.5h5"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M6 21V4"/><path d="M6 4h11l-2 4 2 4H6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></symbol>
+<symbol id="i-src" viewBox="0 0 24 24"><path d="M4 6.5C4 5 6.7 4 10 4s6 1 6 2.5v11C16 19 13.3 20 10 20s-6-1-6-2.5z"/><path d="M4 12c0 1.5 2.7 2.5 6 2.5s6-1 6-2.5"/><path d="M19 9v9.5"/></symbol>
+</svg>
+
+<div class="bar top">
+  <span class="tag"><svg class="ic ic-s"><use href="#i-book"/></svg>管理技能</span>
+  <span class="tt">激励与坏消息沟通 · 第001期 · 2026-08-17</span>
+  <span class="sp"></span>
+  <button class="cbtn" id="tocBtn"><svg class="ic ic-s"><use href="#i-menu"/></svg>目录</button>
+  <button class="cbtn" id="modeBtn"><svg class="ic ic-s"><use href="#i-doc"/></svg><span id="modeTxt">阅读模式</span></button>
+  <button class="cbtn" id="fsBtn"><svg class="ic ic-s"><use href="#i-full"/></svg></button>
+  <button class="cbtn" id="prBtn"><svg class="ic ic-s"><use href="#i-print"/></svg>导出PDF</button>
+  <a class="cbtn p" href="../index.html"><svg class="ic ic-s"><use href="#i-home"/></svg>返回主站</a>
+</div>
+
+<div class="viewport"><div class="stage" id="stage">
+
+<!-- 1 -->
+<section class="slide cover on">
+  <div class="wm"></div>
+  <div class="eyebrow">WKING WEEKLY · 管理技能 · ISSUE 001</div>
+  <h1>激励与坏消息沟通：<br>产能波动期的两个硬场景</h1>
+  <p class="lead">这个板块只讲一件事：<b>怎么做</b>。理论只保留够用的那一层，剩下的全部转成表格、话术和检查项。本期覆盖激励设计与坏消息传递两个高频场景，附 2 个实际案例。</p>
+  <div class="kv">
+    <div><b>激励 = 期望 × 效价 × 公平</b><span>三要素诊断法</span></div>
+    <div><b>BLUF + SCQA</b><span>坏消息话术模板</span></div>
+    <div><b>2 个案例</b><span>1 个脱敏实践 + 1 个公开报道</span></div>
+  </div>
+  <div class="meta">
+    <i><svg class="ic ic-s"><use href="#i-clock"/></svg>2026年8月17日 08:00 发布</i>
+    <i><svg class="ic ic-s"><use href="#i-eye"/></svg>全篇 9 页，约 6 分钟</i>
+    <i><svg class="ic ic-s"><use href="#i-src"/></svg>经典模型 + 公开报道 + 脱敏实践</i>
+  </div>
+  <div class="sn">01 / 09</div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="eyebrow">How to read</div>
+  <h2 class="s-title">本期结构：知识 → 场景 → 施策 → 案例</h2>
+  <p class="s-sub">管理内容最容易犯的错是"讲了一堆道理，回到工位不知道改哪一步"。所以每期固定这四段。</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="g4">
+      <div class="card"><h4><span class="badge">01</span>知识</h4><p>只留能改变判断的那一层。本期两个：<b>激励三要素</b>（期望理论 × 公平理论）、<b>信息前置原则</b>（BLUF）。不铺理论史。</p></div>
+      <div class="card"><h4><span class="badge">02</span>场景</h4><p>把知识钉到具体场景上：<b>产能波动期的班组激励</b>、<b>向上级/客户传递坏消息</b>。场景错了，方法再对也没用。</p></div>
+      <div class="card"><h4><span class="badge">03</span>施策</h4><p>给可直接抄的东西：<b>激励设计表</b>（含权重、频率、边界）、<b>话术模板</b>（含开场三句话）。</p></div>
+      <div class="card"><h4><span class="badge">04</span>案例</h4><p>每期 1-2 个。<b>严格标注性质</b>：脱敏改写的实践案例 / 公开报道案例，绝不把编的写成真的。</p></div>
+    </div>
+    <div class="callout" style="margin-top:16px"><svg class="ic ic-s"><use href="#i-warn"/></svg><div><b>关于案例的说明：</b>本期案例 1 为多家制造企业共性做法的<b>脱敏改写</b>（隐去企业与人名，数字做等比例调整），用于示范方法而非陈述某企业事实；案例 2 全部依据<b>公开报道</b>，可回溯原始出处。</div></div>
+    <div class="g2 a" style="margin-top:14px;height:auto">
+      <div class="card hi"><h4><svg class="ic ic-s" style="color:var(--c)"><use href="#i-bulb"/></svg>本期覆盖的能力维度</h4><p><b>沟通</b>（坏消息传递、开场三句话）、<b>激励</b>（三要素诊断、设计表）、<b>人性</b>（损失厌恶与公平感）、<b>逻辑</b>（结论先行）、<b>本质</b>（激励的本质是可预期性）。后续期次轮转覆盖营销、财务、博弈、商务。</p></div>
+      <div class="card"><h4>什么时候不该用激励手段</h4><p>三种情况下先别谈钱：① 目标本身不清楚（激励会放大错误方向）；② 流程有硬瓶颈（人再拼也过不去，只会积累怨气）；③ 公平感已经破裂（此时加钱会被解读为封口费）。<b>先修目标、瓶颈、公平，再谈激励。</b></p></div>
+    </div>
+  </div>
+  <div class="src"><b>方法来源：</b>期望理论（V. Vroom）、公平理论（J.S. Adams）、BLUF 与 SCQA 为通行的结构化表达框架；施策部分为作者实践归纳。</div>
+  <div class="sn">02 / 09</div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="eyebrow">Knowledge</div>
+  <h2 class="s-title">激励三要素：任何一项为零，结果就是零</h2>
+  <p class="s-sub">这是一个乘法模型，不是加法模型——这决定了你该先修哪一项。</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="g2 a" style="height:auto">
+      <div>
+        <svg class="chart" viewBox="0 0 560 300" role="img" aria-label="激励三要素乘法模型示意图">
+          <g font-family="var(--font)">
+            <rect x="14" y="40" width="150" height="86" rx="14" fill="#FEF1E9" stroke="#FBD3B4"/>
+            <text x="89" y="72" font-size="15" font-weight="800" fill="#7C2D12" text-anchor="middle">期望</text>
+            <text x="89" y="94" font-size="11.5" fill="#9A3412" text-anchor="middle">我努力，就真能</text>
+            <text x="89" y="110" font-size="11.5" fill="#9A3412" text-anchor="middle">做到吗？</text>
+            <text x="180" y="90" font-size="22" font-weight="800" fill="#C2410C" text-anchor="middle">×</text>
+            <rect x="196" y="40" width="150" height="86" rx="14" fill="#FEF1E9" stroke="#FBD3B4"/>
+            <text x="271" y="72" font-size="15" font-weight="800" fill="#7C2D12" text-anchor="middle">效价</text>
+            <text x="271" y="94" font-size="11.5" fill="#9A3412" text-anchor="middle">做到了给我的东西</text>
+            <text x="271" y="110" font-size="11.5" fill="#9A3412" text-anchor="middle">我在乎吗？</text>
+            <text x="362" y="90" font-size="22" font-weight="800" fill="#C2410C" text-anchor="middle">×</text>
+            <rect x="378" y="40" width="150" height="86" rx="14" fill="#FEF1E9" stroke="#FBD3B4"/>
+            <text x="453" y="72" font-size="15" font-weight="800" fill="#7C2D12" text-anchor="middle">公平</text>
+            <text x="453" y="94" font-size="11.5" fill="#9A3412" text-anchor="middle">跟别人比，这个</text>
+            <text x="453" y="110" font-size="11.5" fill="#9A3412" text-anchor="middle">分配合理吗？</text>
+            <path d="M271 132 L271 158" stroke="#C2410C" stroke-width="2"/>
+            <path d="M265 152 L271 160 L277 152" fill="none" stroke="#C2410C" stroke-width="2"/>
+            <rect x="120" y="164" width="302" height="52" rx="13" fill="#7C2D12"/>
+            <text x="271" y="196" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">真实的行为改变</text>
+            <text x="271" y="242" font-size="12.5" fill="#4A5568" text-anchor="middle">诊断顺序：先看期望（能不能做到）→ 再看效价（想不想要）</text>
+            <text x="271" y="262" font-size="12.5" fill="#4A5568" text-anchor="middle">→ 最后看公平（服不服气）。顺序错了会白花钱。</text>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:11px">
+          <h4>三种常见"无效激励"的真实原因</h4>
+          <table class="tbl">
+            <tr><th>现象</th><th>失效的那一项</th><th>正确动作</th></tr>
+            <tr><td>奖金翻倍也没人动</td><td><b>期望 = 0</b><br>目标压根做不到</td><td>拆目标到可达区间，先给"看得见的第一步"</td></tr>
+            <tr><td>发了奖品没人稀罕</td><td><b>效价 = 0</b><br>给的不是他要的</td><td>问一句"你最想要什么"，年轻班组常选调休与排班优先权</td></tr>
+            <tr><td>拿到钱反而闹情绪</td><td><b>公平 = 0</b><br>横向比较受伤</td><td>公开规则而非公开金额，先讲清分配依据</td></tr>
+          </table>
+        </div>
+        <div class="quote"><b>本质一句话：</b>激励的本质不是"给多少"，而是<b>可预期性</b>——员工能提前算出"我做到什么，就一定拿到什么"。规则朝令夕改，任何金额都会失效。</div>
+      </div>
+    </div>
+  </div>
+  <div class="src"><b>来源：</b>期望理论（Victor Vroom, 1964）、公平理论（John Stacey Adams, 1963）；表格与结论为作者在制造业场景下的实践归纳。</div>
+  <div class="sn">03 / 09</div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="eyebrow">Playbook</div>
+  <h2 class="s-title">施策：产能波动期的班组激励设计表</h2>
+  <p class="s-sub">可直接照抄的结构。行业需求剧烈波动时（如当前燃油线减产、出口线加产），这张表比开会更有用。</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="tblwrap">
+      <table class="tbl">
+        <tr><th style="width:14%">要素</th><th style="width:30%">怎么设</th><th style="width:28%">数值参考（需按本厂调整）</th><th style="width:28%">最容易踩的坑</th></tr>
+        <tr><td><b>考核对象</b></td><td>以<b>班组</b>为单位，不下沉到个人</td><td>3-12 人一组</td><td>下沉到个人会破坏互助，波动期最忌拆散协作</td></tr>
+        <tr><td><b>指标数量</b></td><td>产出 + 质量 + 安全，<b>最多 3 个</b></td><td>权重 5 : 3 : 2</td><td>加到 5 个以上，班组会只做权重最高那一个</td></tr>
+        <tr><td><b>质量红线</b></td><td>设一票否决项</td><td>关键工序不良超阈值，产出奖清零</td><td>没有红线时，赶产量必然牺牲质量</td></tr>
+        <tr><td><b>结算频率</b></td><td>波动期<b>缩短</b>到周或旬</td><td>周结算 / 月兑付</td><td>季度结算在波动期等于没有激励，反馈太慢</td></tr>
+        <tr><td><b>非现金部分</b></td><td>给可选项，让员工自己挑</td><td>调休、排班优先权、培训名额、班组基金</td><td>统一发同一件礼品，效价必然被拉低</td></tr>
+        <tr><td><b>减产期做法</b></td><td>从"奖产量"切到<b>奖改善</b></td><td>改善提案采纳数、设备保养完成率、技能取证数</td><td>减产就停发激励，是公平感崩塌的第一诱因</td></tr>
+        <tr><td><b>规则变更</b></td><td>提前一个结算周期公告</td><td>不追溯、不中途改标准</td><td>中途改标准，一次就能毁掉一年信任</td></tr>
+      </table>
+    </div>
+    <div class="g2" style="height:auto;margin-top:14px">
+      <div class="callout ok"><svg class="ic ic-s"><use href="#i-check"/></svg><div><b>三句话开场（班前会用）：</b>「这周的目标是 X，达成的判定标准是 Y。」「达成之后，你们会拿到 Z，什么时候到手我现在讲清楚。」「过程中如果卡在设备或物料上，报给我，我来解决，不算你们的。」</div></div>
+      <div class="card"><h4>验证是否设计成功的三个信号</h4><p>① 班组能自己算出这周能拿多少（可预期性达标）；② 出现班组内部互相补位而不是抢工时（单位设计正确）；③ 有人主动报瓶颈而不是隐瞒（信任建立）。三项都不成立，就是规则本身有问题，别怪员工态度。</p></div>
+    </div>
+  </div>
+  <div class="src"><b>说明：</b>数值参考为多家制造企业常见区间的归纳，非某一企业标准，落地前须结合本厂工时制度、薪酬结构与合规要求核定。</div>
+  <div class="sn">04 / 09</div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="eyebrow">Playbook</div>
+  <h2 class="s-title">施策：坏消息怎么讲——BLUF + SCQA</h2>
+  <p class="s-sub">坏消息不是"说不说"的问题，是"谁先知道、怎么知道"的问题。</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="g2 a" style="height:auto">
+      <div>
+        <div class="card hi" style="margin-bottom:11px">
+          <h4><svg class="ic ic-s" style="color:var(--c)"><use href="#i-chat"/></svg>四段话术模板（可直接改字）</h4>
+          <table class="tbl">
+            <tr><th style="width:22%">段落</th><th>说什么</th></tr>
+            <tr><td><b>① 结论先行</b><br><span style="font-size:11px;color:var(--ink-3)">BLUF</span></td><td>「有个坏消息需要你现在知道：<b>A 项目交期要延迟 5 天</b>。」<br>不铺垫、不寒暄、不从背景讲起。</td></tr>
+            <tr><td><b>② 影响量化</b></td><td>「影响面是：客户 B 的首批 2000 件顺延，违约风险 XX 元，其他三个项目不受影响。」<br>把范围<b>框死</b>，避免对方想象成灾难。</td></tr>
+            <tr><td><b>③ 归因不甩锅</b></td><td>「原因是我这边对来料检验周期估计不足，不是供应商单方面问题。」<br>先认自己那部分，可信度才成立。</td></tr>
+            <tr><td><b>④ 方案 + 决策点</b></td><td>「两个选项：加急空运补 3 天、成本 +X；或与客户改签交期。<b>需要你定一个</b>，今天下班前我要回客户。」</td></tr>
+          </table>
+        </div>
+        <div class="callout"><svg class="ic ic-s"><use href="#i-warn"/></svg><div><b>三个禁忌：</b>不要用"可能、大概、应该不会有大问题"模糊化；不要在坏消息里夹带无关的好消息（会被认为在稀释）；不要让上级从第三方先听到——那一刻起，问题从"事故"变成"你的人品"。</div></div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:11px">
+          <h4>SCQA：写书面汇报时用</h4>
+          <p><b>S 情境：</b>A 项目原定 8/20 交付首批 2000 件。<br><b>C 冲突：</b>关键件来料检验发现尺寸超差，需重检返工。<br><b>Q 问题：</b>是加急空运保交期，还是与客户改签？<br><b>A 答案：</b>建议加急空运，成本 X 元，可保住客户 B 的年度框架。<br><span style="color:var(--ink-3);font-size:12.2px">口头汇报用 BLUF（结论第一句），书面汇报用 SCQA（背景到方案完整闭环）。</span></p>
+        </div>
+        <div class="card">
+          <h4>人性层：为什么坏消息越晚说越贵</h4>
+          <p>人对损失的敏感度显著高于同等收益（损失厌恶）。坏消息随时间发酵，会额外叠加两笔成本：<b>信息成本</b>（对方失去决策窗口）与<b>信任成本</b>（对方开始怀疑还有多少没说）。<br>所以规则很简单：<b>坏消息的传递速度，要快于它的扩散速度。</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="src"><b>来源：</b>BLUF（Bottom Line Up Front）为通行的结构化表达原则；SCQA 出自麦肯锡系结构化写作方法；损失厌恶概念出自 Kahneman &amp; Tversky 前景理论（1979）。话术为作者实践归纳。</div>
+  <div class="sn">05 / 09</div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="eyebrow">Case 01 · 脱敏改写</div>
+  <h2 class="s-title">案例一：产能爬坡期，激励改了三次才对</h2>
+  <p class="s-sub"><span class="badge gray">性质：多企业共性做法脱敏改写，隐去企业与人名，数字等比例调整</span></p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="g3">
+      <div class="card">
+        <h4>第一版：加钱（失败）</h4>
+        <p><b>做法：</b>出口订单突增，产线需从日产 800 提到 1200，宣布"超产部分按件加发奖金"。</p>
+        <p><b>结果：</b>两周后产量仅到 900，且不良率上升 1.8 个百分点。</p>
+        <p><b>诊断：</b><b>期望 ≈ 0</b>。设备节拍上限在 1050，工人算得出来 1200 做不到，于是干脆不追；同时没有质量红线，加件数成了唯一目标。</p>
+      </div>
+      <div class="card">
+        <h4>第二版：拆目标 + 设红线（部分有效）</h4>
+        <p><b>做法：</b>目标改为三阶梯 900 / 1000 / 1050，配套质量一票否决；同步立项解决节拍瓶颈。</p>
+        <p><b>结果：</b>四周内稳定到 1020，不良率回落。但夜班开始出现抱怨，离职面谈里出现"凭什么白班拿得多"。</p>
+        <p><b>诊断：</b>期望修好了，<b>公平出问题</b>——夜班物料到位率低，同样努力产出天然更少。</p>
+      </div>
+      <div class="card hi">
+        <h4>第三版：分基线 + 给选项（成立）</h4>
+        <p><b>做法：</b>① 白/夜班分别设基线，按<b>各自基线达成率</b>计奖；② 奖金拿出 30% 换成可选项（调休、排班优先权、技能培训名额）；③ 规则提前一周公告、当期不追溯；④ 设备与物料造成的停线不计入班组考核。</p>
+        <p><b>结果：</b>产量稳定在 1040-1060，不良率低于爬坡前水平，主动报修与改善提案明显增加。</p>
+      </div>
+    </div>
+    <div class="callout ok" style="margin-top:16px"><svg class="ic ic-s"><use href="#i-check"/></svg><div><b>可迁移的三条：</b>① 定目标前先算<b>物理上限</b>，别让员工替你承担产能设计错误；② 凡是"不同班次/不同工段"同表考核，都要先问一句"他们的起跑线一样吗"；③ 把一部分奖励改成<b>可选项</b>，是提升效价最便宜的方法。</div></div>
+  </div>
+  <div class="src"><b>案例性质声明：</b>本案例为多家制造企业常见处理方式的脱敏改写与合成，用于示范方法论，<b>不代表任何特定企业的真实经营数据</b>。</div>
+  <div class="sn">06 / 09</div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="eyebrow">Case 02 · 公开报道</div>
+  <h2 class="s-title">案例二：本田在华"把决策权交回来"</h2>
+  <p class="s-sub"><span class="badge gray">性质：依据公开报道，可回溯原始出处</span>　组织管理进化视角</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="g2 a" style="height:auto">
+      <div>
+        <div class="card" style="margin-bottom:11px">
+          <h4>事实（公开报道）</h4>
+          <p>本田中国 2026 年 7 月终端销量 25,052 辆、同比 -44.1%，1-7 月累计 23.09 万辆、同比 -35.9%；年销量自 2020 年峰值 162.7 万辆连续五年下滑至 2025 年的 64.53 万辆。</p>
+          <p>公开报道的转型动作包括：终结"海外研发、中国导入"模式，<b>下放中方团队主导车型定义与研发</b>；2027 年起两年内密集投放 5 款新车（含 2 款中国专属新能源）；与华为鸿蒙、Momenta 等本土企业合作补齐智能化；加速供应链本土化；合资合作续约至 2038 年。</p>
+        </div>
+        <div class="callout"><svg class="ic ic-s"><use href="#i-warn"/></svg><div>本页只做<b>组织管理角度</b>的解读，不评价其商业前景，也不构成投资建议。企业经营结果由多因素决定，单一组织变量无法解释全部。</div></div>
+      </div>
+      <div>
+        <div class="card hi" style="margin-bottom:11px">
+          <h4><svg class="ic ic-s" style="color:var(--c)"><use href="#i-flag"/></svg>管理视角：这是一次"决策权重新配置"</h4>
+          <p><b>底层问题不是产品，是决策链路太长。</b>当市场迭代周期（约 12-18 个月）短于总部决策周期时，再优秀的中央决策也必然滞后。此时唯一有效的动作是<b>把决策权移到信息发生地</b>。</p>
+          <p>组织设计上有一条通用原则：<b>决策权应当配置给同时拥有信息与承担后果的一方</b>。中方团队掌握本地信息、承担销量后果，却不拥有定义权——这就是典型的权责错配。</p>
+        </div>
+        <div class="card">
+          <h4>迁移到你的组织：三个自检问题</h4>
+          <p>① 我们最关键的决策，做决定的人和承担后果的人是同一批吗？<br>② 一个明显正确的本地判断，要经过几层审批才能变成动作？这个时长与市场变化速度相比如何？<br>③ 权限下放之后，<b>问责与资源是否同步下放</b>？只放责任不放资源，是变相加压，比不放更糟。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="src"><b>来源：</b>运营商财经网（2026-08-12）、太平洋汽车、日经中文网（2026-08-07）等公开报道；本田中国官网 2026年1-5月销量；广汽集团 2026年7月产销快报。销量数据口径见本站行业信息板块第001期第 06 页说明。</div>
+  <div class="sn">07 / 09</div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="eyebrow">Checklist</div>
+  <h2 class="s-title">一页带走：本周可执行清单</h2>
+  <p class="s-sub">打印出来贴在办公桌上，做完一项划掉一项。</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="g2" style="height:auto">
+      <div class="card">
+        <h4><svg class="ic ic-s" style="color:var(--c)"><use href="#i-users"/></svg>激励侧（4 项）</h4>
+        <ul class="bl dot" style="gap:9px">
+          <li><span class="num">1</span><div>拿现行激励规则做<b>三要素体检</b>：期望（能不能做到）/ 效价（想不想要）/ 公平（服不服气），标出为零的那一项。</div></li>
+          <li><span class="num">2</span><div>核算本产线<b>物理产能上限</b>，确认现行目标是否落在可达区间内。</div></li>
+          <li><span class="num">3</span><div>把激励指标砍到 <b>3 个以内</b>，并补一条质量一票否决红线。</div></li>
+          <li><span class="num">4</span><div>拿出奖励的 20-30% 改成<b>可选项</b>，先在一个班组试两周。</div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><svg class="ic ic-s" style="color:var(--c)"><use href="#i-chat"/></svg>沟通侧（4 项）</h4>
+        <ul class="bl dot" style="gap:9px">
+          <li><span class="num">5</span><div>把手上<b>最不想说的那件事</b>写成 BLUF 四段，今天说出去。</div></li>
+          <li><span class="num">6</span><div>给团队定一条<b>坏消息上报时限</b>（例如发现后 2 小时内），并明确"及时上报不追责、隐瞒才追责"。</div></li>
+          <li><span class="num">7</span><div>班前会固定用<b>三句话开场</b>：目标与判定标准、回报与到手时间、卡点归我解决。</div></li>
+          <li><span class="num">8</span><div>本周所有对外数据引用，一律附<b>来源 + 日期 + 口径</b>三件套。</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout ok" style="margin-top:15px"><svg class="ic ic-s"><use href="#i-check"/></svg><div><b>如果只做一件：</b>做第 1 项。把无效激励的那一项找出来，比新增任何预算都值钱——因为乘法模型里，修补零项的收益是无限倍的。</div></div>
+  </div>
+  <div class="src"><b>使用建议：</b>清单按"当周可完成"设计；若某项涉及薪酬结构调整，须先过合规与 HR 流程。</div>
+  <div class="sn">08 / 09</div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="eyebrow">References</div>
+  <h2 class="s-title">本期来源与延伸阅读</h2>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="srclist">
+      <div class="srci"><strong>Victor H. Vroom, Work and Motivation (1964)</strong>期望理论：动机 = 期望 × 工具性 × 效价。本期简化为"期望 × 效价"两项并入公平维度。</div>
+      <div class="srci"><strong>John Stacey Adams, Toward an Understanding of Inequity (1963)</strong>公平理论：个体通过投入/产出比的横向比较形成公平感，不公平会触发行为调整。</div>
+      <div class="srci"><strong>Kahneman &amp; Tversky, Prospect Theory (1979)</strong>损失厌恶：损失带来的心理冲击显著大于同等规模收益，是坏消息必须尽早传递的底层依据。</div>
+      <div class="srci"><strong>BLUF / SCQA</strong>结构化表达框架：BLUF 源自军事与商业简报实务；SCQA 为麦肯锡系结构化写作方法（Barbara Minto《金字塔原理》体系）。</div>
+      <div class="srci"><strong>案例二公开报道</strong>运营商财经网（2026-08-12）、太平洋汽车、日经中文网（2026-08-07）；本田中国官网月度销量（2026年1-5月）；广汽集团 2026年7月产销快报。</div>
+      <div class="srci"><strong>案例一</strong>作者对多家制造企业共性做法的脱敏改写与合成，不对应特定企业真实数据，仅用于方法示范。</div>
+    </div>
+    <div class="callout" style="margin-top:14px"><svg class="ic ic-s"><use href="#i-warn"/></svg><div><b>下期预告（2026-08-24）：</b>定价与毛利结构——从财务视角看营销动作，附 2 个商务谈判让步案例。<b>本板块承诺：</b>每期至少 1 个可直接抄的表格或话术，每期案例明确标注性质。</div></div>
+  </div>
+  <div class="src"><b>WKing 周报</b> · 管理技能板块 · 第001期 · 2026-08-17 08:00 发布 · 下期预计 2026-08-24 08:00</div>
+  <div class="sn">09 / 09</div>
+</section>
+
+</div></div>
+
+<div id="pbar"></div>
+<div class="bar bot">
+  <span style="font-size:12.3px;color:var(--ink-3)" id="botTxt">键盘 ← → 翻页，F 全屏，Esc 退出</span>
+  <span class="sp"></span>
+  <div class="navb" style="display:flex;align-items:center;gap:8px">
+    <button class="cbtn" id="prev"><svg class="ic ic-s"><use href="#i-l"/></svg></button>
+    <span class="pg" id="pg">1 / 9</span>
+    <button class="cbtn" id="next"><svg class="ic ic-s"><use href="#i-r"/></svg></button>
+  </div>
+</div>
+
+<div class="mask" id="mask"></div>
+<aside class="toc" id="toc">
+  <div class="toc-h"><h3>本期目录</h3><button class="cbtn" id="tocClose"><svg class="ic ic-s"><use href="#i-x"/></svg></button></div>
+  <div class="toc-b" id="tocB"></div>
+</aside>
+
+<script>
+var TITLES=['封面 · 本期主题','本期结构：知识→场景→施策→案例','激励三要素乘法模型','施策：班组激励设计表','施策：坏消息话术 BLUF+SCQA','案例一：产能爬坡期激励三改','案例二：本田下放决策权解读','一页带走：本周可执行清单','来源与延伸阅读'];
+var S=[].slice.call(document.querySelectorAll('.slide')),i=0,N=S.length;
+var $=function(s){return document.querySelector(s);};
+function isDoc(){ return document.body.classList.contains('doc'); }
+function fit(){
+  if(isDoc()){ $('#stage').style.transform=''; return; }
+  var vp=$('.viewport'), s=Math.min((vp.clientWidth-32)/1280,(vp.clientHeight-32)/720);
+  $('#stage').style.transform='scale('+s+')';
+}
+function go(n){
+  if(n<0)n=0; if(n>N-1)n=N-1; i=n;
+  if(isDoc()){ S[i].scrollIntoView({behavior:'smooth',block:'start'}); }
+  else { S.forEach(function(el,k){ el.classList.toggle('on',k===i); }); }
+  $('#pg').textContent=(i+1)+' / '+N;
+  $('#pbar').style.width=((i+1)/N*100)+'%';
+  [].slice.call(document.querySelectorAll('.ti')).forEach(function(t,k){ t.classList.toggle('on',k===i); });
+}
+$('#prev').onclick=function(){ go(i-1); };
+$('#next').onclick=function(){ go(i+1); };
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); go(i+1); }
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); go(i-1); }
+  else if(e.key==='Home'){ go(0); } else if(e.key==='End'){ go(N-1); }
+  else if(e.key==='f'||e.key==='F'){ toggleFs(); }
+  else if(e.key==='Escape'){ closeToc(); }
+});
+var tx=0,ty=0;
+document.addEventListener('touchstart',function(e){ tx=e.touches[0].clientX; ty=e.touches[0].clientY; },{passive:true});
+document.addEventListener('touchend',function(e){
+  if(isDoc())return;
+  var dx=e.changedTouches[0].clientX-tx, dy=e.changedTouches[0].clientY-ty;
+  if(Math.abs(dx)>52&&Math.abs(dx)>Math.abs(dy)) go(dx<0?i+1:i-1);
+},{passive:true});
+$('#tocB').innerHTML=TITLES.map(function(t,k){ return '<div class="ti'+(k===0?' on':'')+'" data-k="'+k+'"><span class="i">'+(k+1)+'</span><span>'+t+'</span></div>'; }).join('');
+[].slice.call(document.querySelectorAll('.ti')).forEach(function(t){ t.onclick=function(){ go(+t.dataset.k); closeToc(); }; });
+function openToc(){ $('#toc').classList.add('on'); $('#mask').classList.add('on'); }
+function closeToc(){ $('#toc').classList.remove('on'); $('#mask').classList.remove('on'); }
+$('#tocBtn').onclick=openToc; $('#tocClose').onclick=closeToc; $('#mask').onclick=closeToc;
+function toggleFs(){ if(!document.fullscreenElement){ (document.documentElement.requestFullscreen||function(){})(); } else if(document.exitFullscreen){ document.exitFullscreen(); } }
+$('#fsBtn').onclick=toggleFs;
+$('#prBtn').onclick=function(){ var d=isDoc(); if(d) document.body.classList.remove('doc'); setTimeout(function(){ window.print(); if(d) document.body.classList.add('doc'); },120); };
+function setMode(doc){
+  document.body.classList.toggle('doc',doc);
+  $('#modeTxt').textContent=doc?'翻页模式':'阅读模式';
+  $('#botTxt').textContent=doc?'上下滚动连续阅读，可切回翻页模式':'键盘 ← → 翻页，F 全屏，Esc 退出';
+  if(!doc){ S.forEach(function(el,k){ el.classList.toggle('on',k===i); }); }
+  fit();
+}
+$('#modeBtn').onclick=function(){ setMode(!isDoc()); };
+[].slice.call(document.querySelectorAll('table.tbl')).forEach(function(t){
+  if(t.parentNode.className==='tblwrap') return;
+  var w=document.createElement('div'); w.className='tblwrap';
+  t.parentNode.insertBefore(w,t); w.appendChild(t);
+});
+window.addEventListener('resize',fit);
+setMode(window.innerWidth<900);
+fit(); go(0);
+</script>
+</body>
+</html>

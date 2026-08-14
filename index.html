@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1B5FD9">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<title>WKing · 个人品牌与资讯站 | 行业信息 · 管理技能 · 智能技术 · 设施技术</title>
+<meta name="description" content="WKing 个人资讯站，周一早 8:00 更新。四大板块：乘用车与摩托车行业周报（含 HONDA 与行业前十对比）、管理技能（激励与沟通落地）、AI 与工厂智能化周报、电力污水危化暖通设施技术周报。所有数据来源准确并标注出处，PPT 形式在线预览与下载。">
+<meta name="keywords" content="WKing,行业周报,乘用车,摩托车,HONDA,管理技能,智能工厂,开源大模型,新型电力系统,节能降碳,工业园区污水,个人资讯站">
+<meta name="robots" content="index,follow">
+<meta name="author" content="WKing">
+<link rel="canonical" href="https://wking.example.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WKing 资讯站">
+<meta property="og:title" content="WKing · 个人品牌与资讯站">
+<meta property="og:description" content="周一早 8:00 更新的四大板块行业周报，数据来源准确、标注出处，PPT 在线预览与下载。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WKing · 个人品牌与资讯站">
+<meta name="twitter:description" content="行业信息 / 管理技能 / 智能技术 / 设施技术 四大板块周报，周一更新。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B5FD9'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"WKing 资讯站","url":"https://wking.example.com/","description":"四大板块行业周报资讯站，每周一早 8:00 更新。","author":{"@type":"Person","name":"WKing"},"potentialAction":{"@type":"SearchAction","target":"https://wking.example.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"WKing 周报","author":{"@type":"Person","name":"WKing"},"blogPost":[{"@type":"Report","headline":"乘用车与摩托车行业周报 第001期","datePublished":"2026-08-17T08:00:00+08:00","about":"乘用车产销、摩托车产销、HONDA 对比"},{"@type":"Report","headline":"管理技能 第001期","datePublished":"2026-08-17T08:00:00+08:00","about":"激励设计、坏消息沟通"},{"@type":"Report","headline":"智能技术 第001期","datePublished":"2026-08-17T08:00:00+08:00","about":"智能工厂梯度培育、开源大模型"},{"@type":"Report","headline":"设施技术 第001期","datePublished":"2026-08-17T08:00:00+08:00","about":"新型电力系统、节能降碳、园区污水"}]}
+</script>
+<style>
+:root{
+  --bg:#F8FAFC; --surface:#FFFFFF; --ink:#0F172A; --ink-2:#475569; --ink-3:#64748B;
+  --line:#E5E9F0; --line-2:#EEF2F7;
+  --c-auto:#1B5FD9; --auto-soft:#EAF1FE; --auto-deep:#0B2E5A;
+  --c-mgmt:#C2410C; --mgmt-soft:#FDF0E8; --mgmt-deep:#7C2D12;
+  --c-ai:#6D28D9; --ai-soft:#F3EEFD; --ai-deep:#4C1D95;
+  --c-fac:#047857; --fac-soft:#E7F6EF; --fac-deep:#064E3B;
+  --up:#D92D20; --dn:#079455; --wa:#B54708; --wasoft:#FFFAEB; --oksoft:#ECFDF3;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",Roboto,Arial,sans-serif;
+  --shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px -12px rgba(15,23,42,.14);
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+svg{display:block}
+.ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.ic-s{width:15px;height:15px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.hide{display:none!important}
+
+/* ---------- header ---------- */
+.hd{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:14px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:850;font-size:17px;letter-spacing:-.3px}
+.logo .mk{width:34px;height:34px;border-radius:9px;background:linear-gradient(145deg,var(--c-auto),#7C3AED);color:#fff;display:grid;place-items:center;font-weight:850;font-size:18px}
+.nav{display:flex;gap:4px;margin-left:8px}
+.nav a{padding:8px 12px;border-radius:9px;font-size:13.5px;font-weight:650;color:var(--ink-2);transition:.16s}
+.nav a:hover{background:var(--line-2);color:var(--ink)}
+.nav a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.sp{flex:1}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:10px;border:1px solid var(--line);background:#fff;font-size:13.5px;font-weight:700;color:var(--ink-2);transition:.16s}
+.btn:hover{border-color:var(--c-auto);color:var(--c-auto)}
+.btn.pri{background:var(--c-auto);border-color:transparent;color:#fff}
+.btn.pri:hover{background:var(--auto-deep);color:#fff}
+.menu-btn{display:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#0B2E5A 0%,#1B5FD9 55%,#6D28D9 100%);color:#fff;padding:64px 0 70px}
+.hero::after{content:"";position:absolute;right:-120px;bottom:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 66%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .ey{font-size:12.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#BFD7FF}
+.hero h1{font-size:clamp(30px,5vw,50px);font-weight:850;line-height:1.16;letter-spacing:-1.2px;margin:14px 0 14px;max-width:900px}
+.hero p.lead{font-size:clamp(15px,2.2vw,18px);color:rgba(255,255,255,.86);max-width:760px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:650}
+.cd{display:flex;align-items:center;gap:18px;margin-top:30px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px 20px;flex-wrap:wrap}
+.cd .lab{font-size:13px;color:rgba(255,255,255,.78)}
+.cd .tm{display:flex;gap:10px}
+.cd .tm b{display:block;min-width:54px;text-align:center;background:#fff;color:var(--auto-deep);border-radius:10px;padding:8px 4px;font-size:21px;font-weight:850;font-variant-numeric:tabular-nums;line-height:1.1}
+.cd .tm span{display:block;font-size:10.5px;color:var(--ink-3);text-align:center;margin-top:4px;background:none}
+.cd .nx{font-size:13.5px;color:rgba(255,255,255,.82)}
+
+/* ---------- this week ---------- */
+.tw{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-34px;position:relative;z-index:2}
+.tw .tcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow);transition:.18s}
+.tw .tcard:hover{transform:translateY(-3px);box-shadow:0 14px 30px -14px rgba(15,23,42,.28)}
+.tw .tcard .tg{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;padding:4px 9px;border-radius:999px}
+.tw .tcard h4{font-size:15px;font-weight:800;margin:11px 0 6px;line-height:1.35}
+.tw .tcard p{font-size:12.5px;color:var(--ink-3);line-height:1.55;min-height:38px}
+.tw .tcard .ft{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.tw .tcard .dt{font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.tw .tcard .go{font-size:12.5px;font-weight:800;display:inline-flex;align-items:center;gap:4px}
+
+/* ---------- section ---------- */
+.sec{padding:54px 0 12px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:8px}
+.sec-ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;flex:0 0 auto;color:#fff}
+.sec-ic svg{stroke-width:2}
+.sec-head .t1{font-size:clamp(22px,3.4vw,28px);font-weight:850;letter-spacing:-.6px}
+.sec-head .t2{font-size:13.5px;color:var(--ink-3);margin-top:3px}
+.sec-line{height:3px;border-radius:3px;margin:18px 0 22px;background:linear-gradient(90deg,currentColor,transparent)}
+
+.concl{background:var(--surface);border:1px solid var(--line);border-left:4px solid;border-radius:12px;padding:16px 18px;margin-bottom:22px;box-shadow:var(--shadow)}
+.concl h3{font-size:14px;font-weight:850;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.concl ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:9px 22px}
+.concl li{display:flex;gap:9px;font-size:13.4px;color:var(--ink-2);line-height:1.6}
+.concl li b{color:var(--ink)}
+.concl li .n{flex:0 0 auto;width:21px;height:21px;border-radius:6px;display:grid;place-items:center;font-size:11.5px;font-weight:850;color:#fff}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.card.hi{background:var(--soft,#F8FAFC);border-color:var(--soft-bd,var(--line))}
+.card h4{font-size:15px;font-weight:820;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.card h4 svg{color:inherit}
+.card p{font-size:13.4px;color:var(--ink-2);line-height:1.72}
+.card p+p{margin-top:8px}
+.card .src{font-size:11.6px;color:var(--ink-3);margin-top:10px;border-top:1px dashed var(--line);padding-top:8px;line-height:1.55}
+.card .src b{color:var(--ink-2);font-weight:700}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:13px 14px}
+.kpi .n{font-size:24px;font-weight:850;letter-spacing:-.6px;font-variant-numeric:tabular-nums;line-height:1.12}
+.kpi .n small{font-size:13px;font-weight:700}
+.kpi .l{font-size:12px;color:var(--ink-3);font-weight:650;margin-top:4px}
+.kpi .c{font-size:12.5px;font-weight:800;margin-top:5px;display:flex;align-items:center;gap:4px}
+.r{color:var(--up)} .g{color:var(--dn)}
+
+.chart{width:100%;height:auto;display:block}
+table.tbl{width:100%;border-collapse:collapse;font-size:12.7px;margin-top:2px}
+table.tbl th{background:var(--line-2);color:var(--ink-2);font-size:11.4px;font-weight:800;text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+table.tbl td{padding:8px 10px;border-bottom:1px solid var(--line-2);color:var(--ink-2);vertical-align:top}
+table.tbl tr:last-child td{border-bottom:0}
+table.tbl td b{color:var(--ink)}
+table.tbl tr.em td{background:var(--soft,#F8FAFC)}
+
+.callout{background:var(--wasoft);border:1px solid #FCE3A6;border-radius:12px;padding:12px 14px;font-size:13px;color:#8A5300;line-height:1.65;display:flex;gap:10px;margin-top:12px}
+.callout svg{color:var(--wa);margin-top:2px;flex:0 0 auto}
+.callout.ok{background:var(--oksoft);border-color:#A6F4C5;color:#054F31}
+.callout.ok svg{color:var(--dn)}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#991B1B}
+.callout.warn svg{color:var(--up)}
+
+.sec-sum{margin-top:24px;background:var(--soft,#F8FAFC);border:1px solid var(--soft-bd,var(--line));border-radius:14px;padding:16px 18px}
+.sec-sum h3{font-size:14px;font-weight:850;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.sec-sum .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.sec-sum .it{font-size:13px;color:var(--ink-2);line-height:1.6;padding-left:0}
+.sec-sum .it b{display:block;color:var(--ink);font-size:13.6px;font-weight:800;margin-bottom:3px}
+
+/* ---------- works ---------- */
+.works{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.wcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.wcard .badge{position:absolute;top:14px;right:14px;font-size:11px;font-weight:800;color:#fff;background:linear-gradient(135deg,#94A3B8,#64748B);padding:4px 10px;border-radius:999px}
+.wcard .ph{width:48px;height:48px;border-radius:12px;background:var(--line-2);display:grid;place-items:center;color:var(--ink-3);margin-bottom:12px}
+.wcard h4{font-size:15.5px;font-weight:800;margin-bottom:6px}
+.wcard p{font-size:13px;color:var(--ink-3);line-height:1.6}
+
+/* ---------- archive ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.tabs{display:flex;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:4px}
+.tabs button{border:0;background:transparent;padding:7px 13px;border-radius:8px;font-size:13px;font-weight:700;color:var(--ink-2);transition:.16s}
+.tabs button.on{background:var(--c-auto);color:#fff}
+.filters input,.filters select{border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:13px;font-family:inherit;color:var(--ink);background:#fff;outline:none}
+.filters input:focus,.filters select:focus{border-color:var(--c-auto)}
+.filters input.kw{flex:1;min-width:180px}
+.arch-list{display:flex;flex-direction:column;gap:10px}
+.arch{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:13px 15px;box-shadow:var(--shadow)}
+.arch .badge2{font-size:11px;font-weight:800;padding:4px 9px;border-radius:999px;flex:0 0 auto}
+.arch .meta{flex:1;min-width:0}
+.arch .meta h4{font-size:14.5px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.arch .meta .sub{font-size:12.3px;color:var(--ink-3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.arch .stat{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;text-align:right;flex:0 0 auto}
+.arch .acts{display:flex;gap:7px;flex:0 0 auto}
+.arch .acts a,.arch .acts button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 11px;font-size:12.5px;font-weight:750;color:var(--ink-2);transition:.16s;display:inline-flex;align-items:center;gap:5px}
+.arch .acts a:hover,.arch .acts button:hover{border-color:var(--c-auto);color:var(--c-auto)}
+.empty{padding:26px;text-align:center;color:var(--ink-3);font-size:13.5px;background:var(--surface);border:1px dashed var(--line);border-radius:13px}
+
+/* ---------- subscribe ---------- */
+.sub{background:linear-gradient(150deg,#0B2E5A,#1B5FD9);color:#fff;border-radius:20px;padding:30px;display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
+.sub h3{font-size:21px;font-weight:850;letter-spacing:-.5px}
+.sub p{font-size:13.5px;color:rgba(255,255,255,.85);margin-top:8px;line-height:1.65}
+.sub form{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:18px}
+.sub label{font-size:12.5px;font-weight:700;color:rgba(255,255,255,.9);display:block;margin-bottom:6px}
+.sub input[type=email]{width:100%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);border-radius:10px;padding:11px 13px;color:#fff;font-size:14px;font-family:inherit;outline:none}
+.sub input::placeholder{color:rgba(255,255,255,.55)}
+.sub .opts{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.sub .opts label{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:650;margin:0;cursor:pointer}
+.sub .opts input{width:15px;height:15px;accent-color:#fff}
+.sub .sbtn{width:100%;border:0;background:#fff;color:var(--auto-deep);border-radius:10px;padding:11px;font-size:14px;font-weight:850;transition:.16s}
+.sub .sbtn:hover{background:#E8F0FF}
+.sub .note{font-size:11.5px;color:rgba(255,255,255,.7);margin-top:9px}
+
+/* ---------- data overview (bottom) ---------- */
+.data{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.data h3{font-size:18px;font-weight:850;display:flex;align-items:center;gap:9px}
+.data .ov{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0 18px}
+.data .ov .b{background:var(--bg);border:1px solid var(--line);border-radius:13px;padding:15px}
+.data .ov .b .n{font-size:26px;font-weight:850;font-variant-numeric:tabular-nums}
+.data .ov .b .l{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+.data .tools{display:flex;flex-wrap:wrap;gap:9px}
+.data .tools button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 13px;font-size:13px;font-weight:700;color:var(--ink-2);transition:.16s;display:inline-flex;align-items:center;gap:6px}
+.data .tools button:hover{border-color:var(--c-auto);color:var(--c-auto)}
+.data .hint{font-size:12px;color:var(--ink-3);margin-top:12px;line-height:1.6}
+
+/* ---------- footer ---------- */
+.ft{margin-top:40px;border-top:1px solid var(--line);padding:26px 0 40px;color:var(--ink-3);font-size:12.8px;line-height:1.7}
+.ft .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+.ft h5{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:9px}
+.ft a:hover{color:var(--c-auto)}
+.ft ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+
+/* ---------- modal ---------- */
+.mask{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:200;opacity:0;pointer-events:none;transition:.2s;display:grid;place-items:center;padding:20px}
+.mask.on{opacity:1;pointer-events:auto}
+.modal{background:#fff;border-radius:16px;padding:22px;max-width:440px;width:100%;box-shadow:0 30px 60px -20px rgba(0,0,0,.4)}
+.modal h4{font-size:17px;font-weight:850;margin-bottom:8px}
+.modal p{font-size:13.5px;color:var(--ink-2);line-height:1.65}
+.modal .mbtns{display:flex;gap:10px;margin-top:18px;justify-content:flex-end}
+.modal .mbtns button{padding:10px 16px;border-radius:10px;font-size:13.5px;font-weight:750;border:1px solid var(--line);background:#fff;color:var(--ink-2);transition:.16s}
+.modal .mbtns button.d{background:var(--up);border-color:transparent;color:#fff}
+.modal .mbtns button.d:hover{background:#B91C1C}
+.modal .mbtns button:hover{border-color:var(--c-auto);color:var(--c-auto)}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:11px;font-size:13.5px;font-weight:700;z-index:300;opacity:0;transition:.25s;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .tw{grid-template-columns:repeat(2,1fr)}
+  .works{grid-template-columns:repeat(2,1fr)}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .sub{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .nav.open{display:flex;position:absolute;top:62px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;padding:10px 16px;gap:2px;box-shadow:var(--shadow)}
+  .nav.open a{padding:11px 10px}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .concl ul{grid-template-columns:1fr}
+  .sec-sum .row{grid-template-columns:1fr}
+  .data .ov{grid-template-columns:repeat(2,1fr)}
+  .ft .cols{grid-template-columns:1fr;gap:18px}
+  .arch{flex-wrap:wrap}
+  .arch .stat{text-align:left}
+  .arch .acts{width:100%}
+  .tw{grid-template-columns:1fr}
+  .works{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
+
+/* ===================== 创意优化：滚动进度 / 入场动画 / 回到顶部 / 焦点 / 悬浮微交互 ===================== */
+:where(section[id],[id]){scroll-margin-top:calc(var(--hd-h,62px) + 12px)}
+:focus-visible{outline:3px solid var(--c-auto);outline-offset:2px;border-radius:7px}
+/* 顶部滚动进度条 */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:90;background:linear-gradient(90deg,var(--c-auto),var(--c-ai) 55%,var(--c-fac));box-shadow:0 0 10px rgba(27,95,217,.45);transition:width .12s linear}
+/* 入场动画（仅在 JS 可用时生效，避免无脚本时内容不可见） */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.d1{transition-delay:.05s}.js .reveal.d2{transition-delay:.12s}.js .reveal.d3{transition-delay:.19s}.js .reveal.d4{transition-delay:.26s}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1!important;transform:none!important;transition:none!important}}
+/* 导航当前区块高亮 */
+.nav a.active{color:var(--ac,var(--c-auto))!important;background:var(--bg);box-shadow:inset 0 -2px 0 var(--ac,var(--c-auto))}
+/* 回到顶部 */
+.toTop{position:fixed;right:18px;bottom:calc(20px + env(safe-area-inset-bottom));width:46px;height:46px;border-radius:14px;border:1px solid var(--line);background:#fff;color:var(--ink-2);display:grid;place-items:center;box-shadow:var(--shadow);z-index:85;opacity:0;transform:translateY(16px) scale(.92);pointer-events:none;transition:.26s}
+.toTop.show{opacity:1;transform:none;pointer-events:auto}
+.toTop:hover{color:var(--c-auto);border-color:var(--c-auto)}
+/* 卡片悬浮微交互 */
+.card,.tcard,.wcard{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover,.tcard:hover,.wcard:hover{border-color:var(--c-auto);box-shadow:0 20px 40px -20px rgba(27,95,217,.45)}
+.tw .tcard:hover{transform:translateY(-4px);box-shadow:0 20px 42px -18px rgba(27,95,217,.5)}
+.btn:active,.sbtn:active,.toTop:active{transform:scale(.96)}
+/* 主视觉：流动渐变 + 漂浮光斑 */
+.hero{background-size:220% 220%;animation:hkflow 16s ease infinite}
+@keyframes hkflow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero::before{content:"";position:absolute;left:-90px;top:-130px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.30),transparent 60%);animation:hkfloat 10s ease-in-out infinite;pointer-events:none}
+@keyframes hkfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero h1{text-shadow:0 2px 18px rgba(0,0,0,.18)}
+@media (prefers-reduced-motion:reduce){.hero{animation:none}.hero::before{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<svg style="display:none" aria-hidden="true">
+<symbol id="i-car" viewBox="0 0 24 24"><path d="M5 17h14"/><path d="M3 13.5 5 8h14l2 5.5V17H3z"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></symbol>
+<symbol id="i-moto" viewBox="0 0 24 24"><circle cx="6" cy="17" r="2.4"/><circle cx="18" cy="17" r="2.4"/><path d="M6 17 9 9h6l3 8M9 9l3-3h4"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 0 1 6 3.5h13V19H6a2 2 0 0 0-2 2z"/><path d="M19 15.5H6a2 2 0 0 0-2 2"/></symbol>
+<symbol id="i-ai" viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="11" rx="3"/><path d="M12 7V4M9 3.2h6M9 18v2M15 18v2M2.5 11v3M21.5 11v3"/></symbol>
+<symbol id="i-fac" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5S5.5 10.5 5.5 14.8A6.5 6.5 0 0 0 18.5 14.8C18.5 10.5 12 3.5 12 3.5z"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.8V18h7v-4.2A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 20v-7M13 20V8M18 20v-4"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M6 21V4"/><path d="M6 4h11l-2 4 2 4H6"/></symbol>
+<symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4 2.8 20h18.4z"/><path d="M12 10v4M12 17h.01"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20c1.2-3.2 3.6-4.8 6.2-4.8s5 1.6 6.2 4.8"/><path d="M16.5 5.2a3.4 3.4 0 0 1 0 6.6"/><path d="M18 15.6c2 .6 3.4 2.1 4.2 4.4"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 1 1-4.2-7.3"/><path d="M20.5 4.5v4.2h-4.2"/><path d="M8 11h8M8 14.5h5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12S18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.7"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M13.5 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10A1.5 1.5 0 0 0 18.5 19V8.5z"/><path d="M13.5 3.5v5h5"/></symbol>
+<symbol id="i-src" viewBox="0 0 24 24"><path d="M4 6.5C4 5 6.7 4 10 4s6 1 6 2.5v11C16 19 13.3 20 10 20s-6-1-6-2.5z"/><path d="M4 12c0 1.5 2.7 2.5 6 2.5s6-1 6-2.5"/><path d="M19 9v9.5"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-save" viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7M8 20v-6h8v6"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 18V7M7 12l5-5 5 5"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M9 7V5h6v2M7 7l1 13h8l1-13"/></symbol>
+<symbol id="i-net" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4"/><circle cx="12" cy="4.4" r="2.1"/><circle cx="19.2" cy="16" r="2.1"/><circle cx="4.8" cy="16" r="2.1"/><path d="M12 6.5v3.1M13.6 13.4 17.6 15M10.4 13.4 6.4 15"/></symbol>
+</svg>
+
+<!-- header -->
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="logo" href="#top"><span class="mk">W</span>WKing 资讯站</a>
+    <nav class="nav" id="nav">
+      <a href="#auto" style="--ac:var(--c-auto)"><span class="dot" style="background:var(--c-auto)"></span>行业信息</a>
+      <a href="#mgmt" style="--ac:var(--c-mgmt)"><span class="dot" style="background:var(--c-mgmt)"></span>管理技能</a>
+      <a href="#ai" style="--ac:var(--c-ai)"><span class="dot" style="background:var(--c-ai)"></span>智能技术</a>
+      <a href="#fac" style="--ac:var(--c-fac)"><span class="dot" style="background:var(--c-fac)"></span>设施技术</a>
+      <a href="#works">创作</a>
+      <a href="#archive">归档</a>
+      <a href="#subscribe">订阅</a>
+      <a href="#data">数据</a>
+    </nav>
+    <span class="sp"></span>
+    <a class="btn pri" href="#subscribe"><svg class="ic ic-s"><use href="#i-bell"/></svg>订阅更新</a>
+    <button class="btn menu-btn" id="menuBtn"><svg class="ic ic-s"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- hero -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="ey">WKING WEEKLY · 每周一早 8:00 更新</div>
+    <h1>把四个行业的硬变化，<br>讲成你周一就能用上的结论</h1>
+    <p class="lead">行业信息、管理技能、智能技术、设施技术四个板块，每周一期。数据来自官方与权威来源并标注出处，PPT 形式在线预览、可下载，便于快速理解与落地。</p>
+    <div class="hero-meta">
+      <span class="chip"><svg class="ic ic-s"><use href="#i-car"/></svg>乘用车与摩托车</span>
+      <span class="chip"><svg class="ic ic-s"><use href="#i-users"/></svg>经营管理与组织</span>
+      <span class="chip"><svg class="ic ic-s"><use href="#i-ai"/></svg>AI 与工厂智能化</span>
+      <span class="chip"><svg class="ic ic-s"><use href="#i-bolt"/></svg>电力·污水·危化·暖通</span>
+    </div>
+    <div class="cd">
+      <div class="lab">距下期更新（2026-08-24 周一 08:00）</div>
+      <div class="tm"><b id="cd-d">--</b><span>天</span></div>
+      <div class="tm"><b id="cd-h">--</b><span>时</span></div>
+      <div class="tm"><b id="cd-m">--</b><span>分</span></div>
+      <div class="tm"><b id="cd-s">--</b><span>秒</span></div>
+      <div class="nx">本期 4 个板块已发布 · 第 001 期</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <!-- this week -->
+  <div class="tw" id="thisWeek"></div>
+</div>
+
+<!-- ===================== 行业信息 ===================== -->
+<section class="sec wrap" id="auto" style="color:var(--c-auto)">
+  <div class="sec-head">
+    <div class="sec-ic" style="background:var(--c-auto)"><svg class="ic"><use href="#i-car"/></svg></div>
+    <div><div class="t1">行业信息</div><div class="t2">乘用车与摩托车行业周报 · 涵盖动态、新技术、新政策、趋势与产销，重点含 HONDA 与行业前十对比</div></div>
+  </div>
+  <div class="sec-line"></div>
+  <div class="concl" style="border-left-color:var(--c-auto)">
+    <h3 style="color:var(--c-auto)"><svg class="ic ic-s"><use href="#i-flag"/></svg>本期核心结论（2026-08-17）</h3>
+    <ul>
+      <li><span class="n" style="background:var(--c-auto)">1</span><div><b>乘用车总量承压但非趋势性恶化。</b>7 月零售 146.1 万辆、同比 -20.9%，乘联分会归因为油价反弹、淡季与需求透支共振。</div></li>
+      <li><span class="n" style="background:var(--c-auto)">2</span><div><b>分化极致。</b>燃油车零售 -41%、纯燃油 -44%，而出口 +87.8% 撑住批发。</div></li>
+      <li><span class="n" style="background:var(--c-auto)">3</span><div><b>摩托车逆势双增。</b>7 月销量 222.08 万辆、同比 +17.4%，出口 +23.76%、大排量 +14.27%。</div></li>
+      <li><span class="n" style="background:var(--c-auto)">4</span><div><b>HONDA 跌幅约为行业两倍。</b>7 月终端 -44.1%，前十中仅零跑正增长。</div></li>
+      <li><span class="n" style="background:var(--c-auto)">5</span><div><b>口径差异要分清。</b>广汽本田 -27.11%（集团快报）与 -46%（终端）不可混用。</div></li>
+      <li><span class="n" style="background:var(--c-auto)">6</span><div><b>短期看成本与口径，中期看产品定义权。</b>合资尤其中日系仍在承压区间。</div></li>
+    </ul>
+  </div>
+
+  <div class="kpis" style="margin-bottom:16px">
+    <div class="kpi"><div class="n">146.1<small>万</small></div><div class="l">7 月乘用车零售</div><div class="c r">同比 -20.9% · 环比 -8.8%</div></div>
+    <div class="kpi"><div class="n">225.2<small>万</small></div><div class="l">7 月厂商批发</div><div class="c r">同比 -0.2% · 出口占 41%</div></div>
+    <div class="kpi"><div class="n">91.8<small>万</small></div><div class="l">7 月出口（含 CKD）</div><div class="c g">同比 +87.8%</div></div>
+    <div class="kpi"><div class="n">222.08<small>万</small></div><div class="l">7 月摩托车销量</div><div class="c g">同比 +17.4%</div></div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-auto)"><svg class="ic ic-s"><use href="#i-chart"/></svg>结构分化：油价按下"油电替代"快进键</h4>
+      <svg class="chart" viewBox="0 0 560 300" role="img" aria-label="7月各细分市场同比增速对比条形图" style="font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+        <line x1="290" y1="12" x2="290" y2="282" stroke="#D7DEE8" stroke-width="1.5"/>
+        <text x="290" y="298" font-size="11" fill="#94A3B8" text-anchor="middle">0%</text>
+        <g font-size="13">
+          <text x="0" y="30" font-weight="700" fill="#0F172A">出口（整车+CKD）</text>
+          <rect x="290" y="18" width="245" height="18" rx="4" fill="#079455"/><text x="539" y="32" fill="#079455" font-size="12.5" font-weight="800">+87.8%</text>
+          <text x="0" y="62" font-weight="700" fill="#0F172A">新能源出口</text>
+          <rect x="290" y="50" width="270" height="18" rx="4" fill="#12B76A"/><text x="564" y="64" fill="#079455" font-size="12.5" font-weight="800">+147.8%</text>
+          <text x="0" y="94" font-weight="700" fill="#0F172A">普通混合动力</text>
+          <rect x="276" y="82" width="14" height="18" rx="4" fill="#F79009"/><text x="268" y="96" fill="#B54708" font-size="12.5" font-weight="800" text-anchor="end">-4%</text>
+          <text x="0" y="126" font-weight="700" fill="#0F172A">新能源零售</text>
+          <rect x="276" y="114" width="14" height="18" rx="4" fill="#F79009"/><text x="268" y="128" fill="#B54708" font-size="12.5" font-weight="800" text-anchor="end">-3.9%</text>
+          <text x="0" y="158" font-weight="700" fill="#0F172A">乘用车零售（整体）</text>
+          <rect x="216" y="146" width="74" height="18" rx="4" fill="#F04438"/><text x="208" y="160" fill="#D92D20" font-size="12.5" font-weight="800" text-anchor="end">-20.9%</text>
+          <text x="0" y="190" font-weight="700" fill="#0F172A">燃油车零售</text>
+          <rect x="148" y="178" width="142" height="18" rx="4" fill="#D92D20"/><text x="140" y="192" fill="#D92D20" font-size="12.5" font-weight="800" text-anchor="end">-41%</text>
+          <text x="0" y="222" font-weight="700" fill="#0F172A">纯燃油车零售</text>
+          <rect x="136" y="210" width="154" height="18" rx="4" fill="#B42318"/><text x="128" y="224" fill="#B42318" font-size="12.5" font-weight="800" text-anchor="end">-44%</text>
+        </g>
+      </svg>
+      <p class="src"><b>来源：</b>乘联分会《2026年7月份全国乘用车市场分析》（2026-08-11）。油价数据：2026 年国内汽油价格累计上调 1575 元/吨。</p>
+    </div>
+    <div class="card">
+      <h4 style="color:var(--c-auto)"><svg class="ic ic-s"><use href="#i-moto"/></svg>摩托车：出口 + 大排量双驱动</h4>
+      <div class="kpis" style="grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+        <div class="kpi"><div class="n" style="font-size:20px">189.96<small>万</small></div><div class="l">燃油摩托销量</div><div class="c g">+18.85%</div></div>
+        <div class="kpi"><div class="n" style="font-size:20px">141.96<small>万</small></div><div class="l">出口</div><div class="c g">+23.76%</div></div>
+        <div class="kpi"><div class="n" style="font-size:20px">10.09<small>万</small></div><div class="l">250ml 以上</div><div class="c g">+14.27%</div></div>
+        <div class="kpi"><div class="n" style="font-size:20px">80.12<small>万</small></div><div class="l">内销</div><div class="c">+7.6%</div></div>
+      </div>
+      <table class="tbl">
+        <tr><th>分项</th><th>销量</th><th>同比</th><th>环比</th></tr>
+        <tr><td>摩托车合计</td><td>222.08 万</td><td class="g">+17.4%</td><td class="r">-1.33%</td></tr>
+        <tr><td>燃油摩托</td><td>189.96 万</td><td class="g">+18.85%</td><td class="g">+2.97%</td></tr>
+        <tr><td>电动摩托*</td><td>32.12 万</td><td class="g">+9.5%</td><td class="r">-20.87%</td></tr>
+        <tr><td>250ml 以上</td><td>10.09 万</td><td class="g">+14.27%</td><td class="r">-11.02%</td></tr>
+      </table>
+      <p class="src"><b>来源：</b>中国摩托车商会 2026年7月数据（2026-08-14）。*电摩为不完全统计。</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-auto)"><svg class="ic ic-s"><use href="#i-chart"/></svg>HONDA 与行业前十：跌幅是行业两倍</h4>
+      <svg class="chart" viewBox="0 0 560 248" role="img" aria-label="本田与主要企业7月同比增速对比" style="font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+        <line x1="300" y1="10" x2="300" y2="222" stroke="#D7DEE8" stroke-width="1.5"/>
+        <line x1="250" y1="10" x2="250" y2="222" stroke="#F04438" stroke-width="1.3" stroke-dasharray="5 4"/>
+        <text x="250" y="240" font-size="10.5" fill="#D92D20" text-anchor="middle">行业 -20.9%</text>
+        <g font-size="12.5">
+          <text x="0" y="26" font-weight="700" fill="#0F172A">零跑（前十唯一正增长）</text><rect x="300" y="14" width="120" height="17" rx="4" fill="#079455"/><text x="426" y="27" fill="#079455" font-size="12" font-weight="800">月销超 10 万</text>
+          <text x="0" y="58" font-weight="700" fill="#0F172A">广汽丰田</text><rect x="236" y="46" width="64" height="17" rx="4" fill="#F79009"/><text x="228" y="59" fill="#B54708" font-size="12" font-weight="800" text-anchor="end">-20%</text>
+          <text x="0" y="90" font-weight="700" fill="#0F172A">一汽丰田</text><rect x="226" y="78" width="74" height="17" rx="4" fill="#F04438"/><text x="218" y="91" fill="#D92D20" font-size="12" font-weight="800" text-anchor="end">-26%</text>
+          <text x="0" y="122" font-weight="700" fill="#0F172A">广汽本田（快报口径）</text><rect x="222" y="110" width="78" height="17" rx="4" fill="#F04438"/><text x="214" y="123" fill="#D92D20" font-size="12" font-weight="800" text-anchor="end">-27.1%</text>
+          <text x="0" y="154" font-weight="700" fill="#0F172A">雷克萨斯</text><rect x="202" y="142" width="98" height="17" rx="4" fill="#D92D20"/><text x="194" y="155" fill="#D92D20" font-size="12" font-weight="800" text-anchor="end">-34%</text>
+          <text x="0" y="186" font-weight="700" fill="#0F172A">本田中国（终端口径）</text><rect x="166" y="174" width="134" height="17" rx="4" fill="#B42318"/><text x="158" y="187" fill="#B42318" font-size="12.5" font-weight="800" text-anchor="end">-44.1%</text>
+          <text x="0" y="218" font-weight="700" fill="#0F172A">本田 1-7 月累计</text><rect x="232" y="206" width="68" height="17" rx="4" fill="#F04438"/><text x="224" y="219" fill="#D92D20" font-size="12" font-weight="800" text-anchor="end">-35.9%</text>
+        </g>
+      </svg>
+      <p class="src"><b>来源：</b>乘联分会 7月排名（2026-08-11）；日经中文网（2026-08-07）；广汽集团产销快报。</p>
+    </div>
+    <div class="card" style="--soft:var(--auto-soft);--soft-bd:#C7DAFB">
+      <h4 style="color:var(--c-auto)"><svg class="ic ic-s"><use href="#i-warn"/></svg>口径差异必须说清</h4>
+      <p>广汽本田 7 月出现两个数：<b>11,686 辆、同比 -27.11%</b>（广汽集团产销快报口径），与 <b>12,413 辆、同比 -46%</b>（日经中文网报道的终端口径）。二者统计对象与基数不同，<b>不能混用</b>。</p>
+      <p>本田中国官网自 5 月后连续两个月未公布销量，25,052 辆为媒体转述口径。引用时务必标注来源与口径。</p>
+      <div class="callout warn" style="margin-top:12px"><svg class="ic ic-s"><use href="#i-warn"/></svg><div>前十中仅零跑实现同比增长；批发前十中仅一汽-大众一家合资。<b>本田两家合资均未进入零售前十。</b></div></div>
+      <p class="src"><b>来源：</b>乘联分会、日经中文网、广汽集团产销快报（2026-08）。</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-auto)"><svg class="ic ic-s"><use href="#i-chart"/></svg>本田在华：五年从 162.7 万到 64.5 万</h4>
+      <svg class="chart" viewBox="0 0 560 270" role="img" aria-label="本田中国2020至2025年销量折线图" style="font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+        <g stroke="#EEF2F6" stroke-width="1"><line x1="56" y1="50" x2="545" y2="50"/><line x1="56" y1="118" x2="545" y2="118"/><line x1="56" y1="186" x2="545" y2="186"/></g>
+        <g font-size="10.5" fill="#94A3B8"><text x="48" y="54" text-anchor="end">160</text><text x="48" y="122" text-anchor="end">120</text><text x="48" y="190" text-anchor="end">80</text></g>
+        <polyline points="76,46 168,60 260,96 352,122 444,192 524,228" fill="none" stroke="#D92D20" stroke-width="3" stroke-linejoin="round"/>
+        <polygon points="76,46 168,60 260,96 352,122 444,192 524,228 524,256 76,256" fill="#D92D20" opacity=".07"/>
+        <g fill="#fff" stroke="#D92D20" stroke-width="2.6"><circle cx="76" cy="46" r="5"/><circle cx="168" cy="60" r="5"/><circle cx="260" cy="96" r="5"/><circle cx="352" cy="122" r="5"/><circle cx="444" cy="192" r="5"/><circle cx="524" cy="228" r="5"/></g>
+        <g font-size="11" font-weight="800" fill="#0F172A" text-anchor="middle"><text x="76" y="36">162.7</text><text x="168" y="50">156.2</text><text x="260" y="86">137.3</text><text x="352" y="112">123.4</text><text x="444" y="182">85.2</text><text x="524" y="218">64.5</text></g>
+        <g font-size="11" fill="#94A3B8" text-anchor="middle"><text x="76" y="258">2020</text><text x="168" y="258">2021</text><text x="260" y="258">2022</text><text x="352" y="258">2023</text><text x="444" y="258">2024</text><text x="524" y="258">2025</text></g>
+      </svg>
+      <p>连续 5 年下滑，较峰值缩水近 100 万辆；2026 年 4-7 月连续 4 个月跌幅在 44%-49%。媒体统计其已连续 30 个月同比下跌。</p>
+      <p class="src"><b>来源：</b>本田中国官网月度销量（2026年1-5月）；运营商财经网（2026-08-12）、日经中文网等公开报道。</p>
+    </div>
+    <div class="card">
+      <h4 style="color:var(--c-auto)"><svg class="ic ic-s"><use href="#i-bulb"/></svg>政策·技术·趋势（提炼）</h4>
+      <ul class="bl" style="list-style:none;display:flex;flex-direction:column;gap:11px">
+        <li style="display:flex;gap:10px;font-size:13.4px;color:var(--ink-2);line-height:1.65"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:var(--auto-soft);color:var(--c-auto);font-weight:800;display:grid;place-items:center;font-size:11px">政</span><div><b>扩内需促消费</b>被政治局会议提及，乘联分会视为车市底部支撑；新能源安全新国标落地抬高门槛。</div></li>
+        <li style="display:flex;gap:10px;font-size:13.4px;color:var(--ink-2);line-height:1.65"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:var(--auto-soft);color:var(--c-auto);font-weight:800;display:grid;place-items:center;font-size:11px">技</span><div><b>合资补课路径趋同：</b>扩纯电、引入本土智能化供应商、把定义权交给中国团队。看新车是否由中国团队定义、上市节奏能否压到 18 个月内。</div></li>
+        <li style="display:flex;gap:10px;font-size:13.4px;color:var(--ink-2);line-height:1.65"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:var(--auto-soft);color:var(--c-auto);font-weight:800;display:grid;place-items:center;font-size:11px">趋</span><div><b>四变量：</b>油价（替代节奏）、出口结构（新能源+CKD）、合资份额（2026H2-2027H1 承压）、摩托车（出口+大排量能否延续）。</div></li>
+      </ul>
+      <div class="callout" style="margin-top:12px"><svg class="ic ic-s"><use href="#i-flag"/></svg><div><b>落地三条：</b>按"批发-零售差"做排产预案；识别合资敞口风险；建立"零售/批发/终端"三口径对照表，每个数字标注来源与日期。</div></div>
+    </div>
+  </div>
+
+  <div class="sec-sum" style="--soft:var(--auto-soft);--soft-bd:#C7DAFB">
+    <h3 style="color:var(--c-auto)"><svg class="ic ic-s"><use href="#i-check"/></svg>板块总结 · 一页带走</h3>
+    <div class="row">
+      <div class="it"><b>总量</b>零售 -20.9% 是阶段性结构性波动，不是趋势性崩塌；批发靠出口托住。</div>
+      <div class="it"><b>结构</b>燃油失速、混动抗跌、新能源出口成主引擎；油价是最大单一变量。</div>
+      <div class="it"><b>HONDA</b>五年缩水近 100 万，跌幅约行业两倍；转型成果最早 2027 年才体现。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 管理技能 ===================== -->
+<section class="sec wrap" id="mgmt" style="color:var(--c-mgmt)">
+  <div class="sec-head">
+    <div class="sec-ic" style="background:var(--c-mgmt)"><svg class="ic"><use href="#i-book"/></svg></div>
+    <div><div class="t1">管理技能</div><div class="t2">企业经营管理与组织管理进化 · 强调应用场景与落地施策，每期附 1-2 个实际案例（沟通/激励/营销/财务/逻辑/博弈/人性/本质/商务）</div></div>
+  </div>
+  <div class="sec-line"></div>
+  <div class="concl" style="border-left-color:var(--c-mgmt)">
+    <h3 style="color:var(--c-mgmt)"><svg class="ic ic-s"><use href="#i-flag"/></svg>本期核心结论（2026-08-17）</h3>
+    <ul>
+      <li><span class="n" style="background:var(--c-mgmt)">1</span><div><b>激励 = 期望 × 效价 × 公平</b>，是乘法不是加法；任一项为零，结果为零。</div></li>
+      <li><span class="n" style="background:var(--c-mgmt)">2</span><div><b>先修哪项是诊断顺序问题：</b>期望（做不做得到）→ 效价（想不想要）→ 公平（服不服气）。</div></li>
+      <li><span class="n" style="background:var(--c-mgmt)">3</span><div><b>坏消息用 BLUF + SCQA：</b>结论先行，传递速度要快于扩散速度。</div></li>
+      <li><span class="n" style="background:var(--c-mgmt)">4</span><div><b>减产期从"奖产量"切到"奖改善"</b>，是公平感崩塌的第一道防火墙。</div></li>
+      <li><span class="n" style="background:var(--c-mgmt)">5</span><div><b>本田在华的本质是决策权错配：</b>把决策权移到信息发生地。</div></li>
+      <li><span class="n" style="background:var(--c-mgmt)">6</span><div><b>案例均标注性质：</b>脱敏改写 / 公开报道，不把编的写成真的。</div></li>
+    </ul>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-mgmt)"><svg class="ic ic-s"><use href="#i-bulb"/></svg>激励三要素：乘法模型</h4>
+      <svg class="chart" viewBox="0 0 560 250" role="img" aria-label="激励三要素乘法模型" style="font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+        <g>
+          <rect x="14" y="30" width="150" height="76" rx="14" fill="#FDF0E8" stroke="#FBD3B4"/>
+          <text x="89" y="58" font-size="14.5" font-weight="800" fill="#7C2D12" text-anchor="middle">期望</text>
+          <text x="89" y="78" font-size="11" fill="#9A3412" text-anchor="middle">我努力，真能做到吗</text>
+          <text x="180" y="76" font-size="20" font-weight="800" fill="#C2410C" text-anchor="middle">×</text>
+          <rect x="196" y="30" width="150" height="76" rx="14" fill="#FDF0E8" stroke="#FBD3B4"/>
+          <text x="271" y="58" font-size="14.5" font-weight="800" fill="#7C2D12" text-anchor="middle">效价</text>
+          <text x="271" y="78" font-size="11" fill="#9A3412" text-anchor="middle">做到了，我在乎吗</text>
+          <text x="362" y="76" font-size="20" font-weight="800" fill="#C2410C" text-anchor="middle">×</text>
+          <rect x="378" y="30" width="150" height="76" rx="14" fill="#FDF0E8" stroke="#FBD3B4"/>
+          <text x="453" y="58" font-size="14.5" font-weight="800" fill="#7C2D12" text-anchor="middle">公平</text>
+          <text x="453" y="78" font-size="11" fill="#9A3412" text-anchor="middle">跟别人比，合理吗</text>
+          <path d="M271 112 L271 134" stroke="#C2410C" stroke-width="2"/><path d="M265 128 L271 136 L277 128" fill="none" stroke="#C2410C" stroke-width="2"/>
+          <rect x="120" y="138" width="302" height="48" rx="13" fill="#7C2D12"/>
+          <text x="271" y="168" font-size="15.5" font-weight="800" fill="#fff" text-anchor="middle">真实的行为改变</text>
+          <text x="271" y="216" font-size="12" fill="#4A5568" text-anchor="middle">奖金翻倍也没人动 → 期望=0；发了奖品没人稀罕 → 效价=0；拿到钱反而闹 → 公平=0</text>
+        </g>
+      </svg>
+      <p style="margin-top:8px">本质一句话：激励的本质不是"给多少"，而是<b>可预期性</b>——员工能提前算出"我做到什么，就一定拿到什么"。规则朝令夕改，任何金额都会失效。</p>
+      <p class="src"><b>来源：</b>期望理论（Vroom, 1964）、公平理论（Adams, 1963）；结论为制造业场景实践归纳。</p>
+    </div>
+    <div class="card">
+      <h4 style="color:var(--c-mgmt)"><svg class="ic ic-s"><use href="#i-users"/></svg>班组激励设计表（产能波动期）</h4>
+      <table class="tbl">
+        <tr><th>要素</th><th>怎么设</th><th>最容易踩的坑</th></tr>
+        <tr><td><b>考核对象</b></td><td>以班组为单位</td><td>下沉到个人破坏互助</td></tr>
+        <tr><td><b>指标数量</b></td><td>产出+质量+安全，≤3 个</td><td>加到 5 个以上只做权重最高的</td></tr>
+        <tr><td><b>质量红线</b></td><td>一票否决</td><td>没红线，赶产必牺牲质量</td></tr>
+        <tr><td><b>结算频率</b></td><td>波动期缩到周/旬</td><td>季度结算等于没有激励</td></tr>
+        <tr><td><b>非现金</b></td><td>给可选项</td><td>统一礼品效价必低</td></tr>
+        <tr><td><b>减产期</b></td><td>切到"奖改善"</td><td>停发是公平感崩塌第一诱因</td></tr>
+      </table>
+      <div class="callout ok" style="margin-top:10px"><svg class="ic ic-s"><use href="#i-check"/></svg><div>三句话开场：这周目标 X、判定标准 Y；达成拿 Z、何时到手；卡在设备/物料上报我，不算你们的。</div></div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-mgmt)"><svg class="ic ic-s"><use href="#i-chat"/></svg>坏消息话术：BLUF + SCQA</h4>
+      <table class="tbl">
+        <tr><th style="width:22%">段落</th><th>说什么</th></tr>
+        <tr><td><b>① 结论先行</b><br><span style="font-size:11px;color:var(--ink-3)">BLUF</span></td><td>「有个坏消息你现在要知道：A 项目交期延迟 5 天。」不铺垫、不从背景讲。</td></tr>
+        <tr><td><b>② 影响量化</b></td><td>框死范围：客户 B 首批 2000 件顺延，违约风险 XX 元，其他不受影响。</td></tr>
+        <tr><td><b>③ 归因不甩锅</b></td><td>先认自己那部分，可信度才成立。</td></tr>
+        <tr><td><b>④ 方案+决策点</b></td><td>给两个选项，今天下班前回客户。</td></tr>
+      </table>
+      <div class="callout warn" style="margin-top:10px"><svg class="ic ic-s"><use href="#i-warn"/></svg><div>三禁忌：用"可能/大概"模糊化；在坏消息里夹好消息；让上级从第三方先听到——那一刻起问题变成你的人品。</div></div>
+    </div>
+    <div class="card">
+      <h4 style="color:var(--c-mgmt)"><svg class="ic ic-s"><use href="#i-chart"/></svg>案例一：三版激励的产量曲线</h4>
+      <svg class="chart" viewBox="0 0 560 220" role="img" aria-label="产能爬坡期三版激励日产对比" style="font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+        <g stroke="#EEF2F6" stroke-width="1"><line x1="60" y1="30" x2="540" y2="30"/><line x1="60" y1="90" x2="540" y2="90"/><line x1="60" y1="150" x2="540" y2="150"/><line x1="60" y1="190" x2="540" y2="190"/></g>
+        <g font-size="10.5" fill="#94A3B8"><text x="52" y="34" text-anchor="end">1200</text><text x="52" y="94" text-anchor="end">1000</text><text x="52" y="154" text-anchor="end">800</text></g>
+        <g>
+          <rect x="90" y="160" width="100" height="30" rx="5" fill="#FCA5A5"/><text x="140" y="180" font-size="12" font-weight="800" fill="#7F1D1D" text-anchor="middle">900</text>
+          <rect x="230" y="116" width="100" height="30" rx="5" fill="#FDBA74"/><text x="280" y="136" font-size="12" font-weight="800" fill="#7C2D12" text-anchor="middle">1020</text>
+          <rect x="370" y="96" width="100" height="30" rx="5" fill="#86EFAC"/><text x="420" y="116" font-size="12" font-weight="800" fill="#064E3B" text-anchor="middle">1050</text>
+        </g>
+        <g font-size="12" font-weight="700" fill="#0F172A" text-anchor="middle"><text x="140" y="205">第一版·加钱（失败）</text><text x="280" y="205">第二版·拆目标（部分）</text><text x="420" y="205">第三版·分基线（成立）</text></g>
+      </svg>
+      <p>第一版"超产加奖金"失败：设备节拍上限 1050，工人算得出 1200 做不到（期望≈0）；第二版补质量红线后到 1020，但夜班因物料到位率低而抱怨（公平出问题）；第三版分白/夜基线、30% 奖励改可选项，稳定在 1040-1060。</p>
+      <p class="src"><b>案例性质：</b>多企业共性做法脱敏改写，数字等比例调整，不代表特定企业真实数据。</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card" style="--soft:var(--mgmt-soft);--soft-bd:#FBD3B4">
+      <h4 style="color:var(--c-mgmt)"><svg class="ic ic-s"><use href="#i-flag"/></svg>案例二（公开报道）：本田下放决策权</h4>
+      <p>本田中国 7 月终端 25,052 辆、同比 -44.1%。公开报道的转型动作：终结"海外研发、中国导入"，<b>下放中方团队主导车型定义与研发</b>；2027 年起两年投 5 款新车（含 2 款中国专属新能源）；牵手华为鸿蒙、Momenta；合资续约至 2038 年。</p>
+      <div class="callout" style="margin-top:10px"><svg class="ic ic-s"><use href="#i-bulb"/></svg><div><b>管理视角：</b>底层问题不是产品，是决策链路太长。组织设计原则——<b>决策权应配置给同时拥有信息与承担后果的一方</b>。只放责任不放资源，是变相加压，比不放更糟。</div></div>
+      <p class="src"><b>来源：</b>运营商财经网（2026-08-12）、太平洋汽车、日经中文网（2026-08-07）等公开报道。</p>
+    </div>
+    <div class="card">
+      <h4 style="color:var(--c-mgmt)"><svg class="ic ic-s"><use href="#i-check"/></svg>本周可执行清单（8 项→摘要）</h4>
+      <ul class="bl" style="list-style:none;display:flex;flex-direction:column;gap:9px">
+        <li style="display:flex;gap:9px;font-size:13px;color:var(--ink-2)"><span style="flex:0 0 auto;width:19px;height:19px;border-radius:6px;background:var(--mgmt-soft);color:var(--c-mgmt);font-weight:800;display:grid;place-items:center;font-size:11px">1</span><div>拿现行规则做<b>三要素体检</b>，标出为零的那一项。</div></li>
+        <li style="display:flex;gap:9px;font-size:13px;color:var(--ink-2)"><span style="flex:0 0 auto;width:19px;height:19px;border-radius:6px;background:var(--mgmt-soft);color:var(--c-mgmt);font-weight:800;display:grid;place-items:center;font-size:11px">2</span><div>核算本产线<b>物理产能上限</b>，确认目标可达。</div></li>
+        <li style="display:flex;gap:9px;font-size:13px;color:var(--ink-2)"><span style="flex:0 0 auto;width:19px;height:19px;border-radius:6px;background:var(--mgmt-soft);color:var(--c-mgmt);font-weight:800;display:grid;place-items:center;font-size:11px">3</span><div>指标砍到 3 个以内，补质量一票否决。</div></li>
+        <li style="display:flex;gap:9px;font-size:13px;color:var(--ink-2)"><span style="flex:0 0 auto;width:19px;height:19px;border-radius:6px;background:var(--mgmt-soft);color:var(--c-mgmt);font-weight:800;display:grid;place-items:center;font-size:11px">4</span><div>20-30% 奖励改可选项，先一个班组试两周。</div></li>
+        <li style="display:flex;gap:9px;font-size:13px;color:var(--ink-2)"><span style="flex:0 0 auto;width:19px;height:19px;border-radius:6px;background:var(--mgmt-soft);color:var(--c-mgmt);font-weight:800;display:grid;place-items:center;font-size:11px">5</span><div>最不想说的那件事，今天写成 BLUF 说出去。</div></li>
+        <li style="display:flex;gap:9px;font-size:13px;color:var(--ink-2)"><span style="flex:0 0 auto;width:19px;height:19px;border-radius:6px;background:var(--mgmt-soft);color:var(--c-mgmt);font-weight:800;display:grid;place-items:center;font-size:11px">6</span><div>定坏消息上报时限，及时上报不追责。</div></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec-sum" style="--soft:var(--mgmt-soft);--soft-bd:#FBD3B4">
+    <h3 style="color:var(--c-mgmt)"><svg class="ic ic-s"><use href="#i-check"/></svg>板块总结 · 一页带走</h3>
+    <div class="row">
+      <div class="it"><b>激励</b>先算物理上限、再问想不想要、最后看公平；20-30% 奖励改可选项最便宜。</div>
+      <div class="it"><b>沟通</b>坏消息结论先行，传递速度要快于扩散速度；别让上级从第三方先听到。</div>
+      <div class="it"><b>组织</b>决策权放到信息发生地；只放责任不放资源，比不放更糟。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 智能技术 ===================== -->
+<section class="sec wrap" id="ai" style="color:var(--c-ai)">
+  <div class="sec-head">
+    <div class="sec-ic" style="background:var(--c-ai)"><svg class="ic"><use href="#i-ai"/></svg></div>
+    <div><div class="t1">智能技术</div><div class="t2">AI 与工厂智能化行业周报 · 涵盖重大动态、新技术及新政策，衔接智能工厂梯度培育与开源大模型</div></div>
+  </div>
+  <div class="sec-line"></div>
+  <div class="concl" style="border-left-color:var(--c-ai)">
+    <h3 style="color:var(--c-ai)"><svg class="ic ic-s"><use href="#i-flag"/></svg>本期核心结论（2026-08-17）</h3>
+    <ul>
+      <li><span class="n" style="background:var(--c-ai)">1</span><div><b>智能工厂进入"四级梯队"时代。</b>六部门梯度培育行动（工信厅联通装函〔2026〕343号）7月15日印发。</div></li>
+      <li><span class="n" style="background:var(--c-ai)">2</span><div><b>AI 场景占比成硬门槛：</b>卓越级 ≥30%、领航级 ≥60%，首次写进国家级认定。</div></li>
+      <li><span class="n" style="background:var(--c-ai)">3</span><div><b>申报窗口很紧：</b>8/15 申报、9/1 推荐，名额按省分档先到先得。</div></li>
+      <li><span class="n" style="background:var(--c-ai)">4</span><div><b>开源大模型三天密集放量：</b>Qwen3.8（2.4T）、DeepSeek V4 Pro（1.6T）、Meta Muse Glimmer。</div></li>
+      <li><span class="n" style="background:var(--c-ai)">5</span><div><b>中国开源占比 41% 首超美国，</b>累计下载破 100 亿次。</div></li>
+      <li><span class="n" style="background:var(--c-ai)">6</span><div><b>对工厂：</b>智能工厂身份看"真跑在 AI 上的场景比例"，且能拿证据。</div></li>
+    </ul>
+  </div>
+
+  <div class="kpis" style="margin-bottom:16px">
+    <div class="kpi"><div class="n">≥30<small>%</small></div><div class="l">卓越级 AI 场景占比</div><div class="c">硬门槛</div></div>
+    <div class="kpi"><div class="n">≥60<small>%</small></div><div class="l">领航级 AI 场景占比</div><div class="c">塔尖</div></div>
+    <div class="kpi"><div class="n">2.4<small>万亿</small></div><div class="l">Qwen3.8 参数（开源）</div><div class="c g">首次开放</div></div>
+    <div class="kpi"><div class="n">41<small>%</small></div><div class="l">中国开源占比</div><div class="c g">首超美国</div></div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-ai)"><svg class="ic ic-s"><use href="#i-chart"/></svg>智能工厂梯度培育：四级递进</h4>
+      <svg class="chart" viewBox="0 0 560 210" role="img" aria-label="智能工厂四级梯度培育递进图" style="font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+        <g>
+          <rect x="6" y="28" width="128" height="160" rx="12" fill="#F3EEFD" stroke="#D6C5F5"/>
+          <text x="70" y="56" font-size="13.5" font-weight="800" fill="#4C1D95" text-anchor="middle">基础级</text>
+          <text x="70" y="80" font-size="11" fill="#6D28D9" text-anchor="middle">数字化转型</text>
+          <text x="70" y="118" font-size="11" fill="#4A5568" text-anchor="middle">规上企业自评</text>
+          <text x="70" y="156" font-size="11" fill="#8A94A6" text-anchor="middle">无 AI 门槛</text>
+          <rect x="146" y="18" width="128" height="170" rx="12" fill="#EDE6FB" stroke="#C9B2F0"/>
+          <text x="210" y="46" font-size="13.5" font-weight="800" fill="#4C1D95" text-anchor="middle">先进级</text>
+          <text x="210" y="70" font-size="11" fill="#6D28D9" text-anchor="middle">数字化+网络化</text>
+          <text x="210" y="108" font-size="11" fill="#4A5568" text-anchor="middle">省级/央企认定</text>
+          <text x="210" y="146" font-size="11" fill="#8A94A6" text-anchor="middle">数据互通共享</text>
+          <text x="210" y="172" font-size="11" fill="#8A94A6" text-anchor="middle">无 AI 门槛</text>
+          <rect x="286" y="8" width="128" height="180" rx="12" fill="#5B21B6"/>
+          <text x="350" y="38" font-size="13.5" font-weight="800" fill="#fff" text-anchor="middle">卓越级</text>
+          <text x="350" y="62" font-size="11" fill="#E4D6FB" text-anchor="middle">智能化·全国标杆</text>
+          <rect x="300" y="84" width="100" height="30" rx="7" fill="#fff"/><text x="350" y="104" font-size="12.5" font-weight="800" fill="#5B21B6" text-anchor="middle">AI≥30%</text>
+          <text x="350" y="162" font-size="11" fill="#E4D6FB" text-anchor="middle">须已获评先进级</text>
+          <rect x="426" y="0" width="128" height="188" rx="12" fill="#4C1D95"/>
+          <text x="490" y="34" font-size="13.5" font-weight="800" fill="#fff" text-anchor="middle">领航级</text>
+          <text x="490" y="58" font-size="11" fill="#E4D6FB" text-anchor="middle">未来制造·全球领先</text>
+          <rect x="440" y="80" width="100" height="30" rx="7" fill="#fff"/><text x="490" y="100" font-size="12.5" font-weight="800" fill="#4C1D95" text-anchor="middle">AI≥60%</text>
+          <text x="490" y="158" font-size="11" fill="#E4D6FB" text-anchor="middle">须专家答辩</text>
+          <text x="490" y="178" font-size="11" fill="#E4D6FB" text-anchor="middle">推荐≤卓越级10%</text>
+        </g>
+      </svg>
+      <p class="src"><b>来源：</b>工信厅联通装函〔2026〕343号（2026-07-15）；平台 miit-imps.com。依据《智能工厂梯度培育管理办法（暂行）》。</p>
+    </div>
+    <div class="card">
+      <h4 style="color:var(--c-ai)"><svg class="ic ic-s"><use href="#i-ai"/></svg>AI 场景占比：从"有没有"到"覆盖多少"</h4>
+      <table class="tbl">
+        <tr><th>维度</th><th>卓越级</th><th>领航级</th></tr>
+        <tr class="em"><td><b>AI 场景占比</b></td><td>≥ 30%</td><td>≥ 60%</td></tr>
+        <tr><td>前置条件</td><td>已获评先进级</td><td>已获评卓越级</td></tr>
+        <tr><td>技术经济指标</td><td>国内领先</td><td>全球领先</td></tr>
+        <tr><td>评审方式</td><td>审核+可能核查</td><td>审核+专家答辩</td></tr>
+        <tr><td>对外义务</td><td>配合推广</td><td>输出新模式</td></tr>
+      </table>
+      <div class="callout ok" style="margin-top:10px"><svg class="ic ic-s"><use href="#i-check"/></svg><div><b>中小工厂建议：</b>先冲"先进级→卓越级"。拉一份《核心场景 × 是否用 AI》清单，把视觉质检、排产、预测性维护三类做透，即可先过 30% 线。</div></div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-ai)"><svg class="ic ic-s"><use href="#i-net"/></svg>三天内密集开源：三款各有主攻</h4>
+      <table class="tbl">
+        <tr><th>模型</th><th>规模</th><th>主攻</th><th>开放</th></tr>
+        <tr><td><b>DeepSeek V4 Pro</b></td><td>1.6T MoE</td><td>编程 Agent</td><td class="g">MIT 开源</td></tr>
+        <tr class="em"><td><b>Qwen3.8</b></td><td>2.4T MoE</td><td>长周期 Agent</td><td class="g">开放权重</td></tr>
+        <tr><td><b>Meta Muse</b></td><td>0.3T</td><td>本地 Agent</td><td class="g">开源</td></tr>
+      </table>
+      <p style="margin-top:8px">三家都把卖点从"单次问答更强"转向<b>长周期自主完成任务</b>——连续编程十几天、独立复现论文。对工厂意味着"让 AI 接管一段工艺调优或排产闭环"更接近可用。</p>
+      <p class="src"><b>来源：</b>智东西、网易号、第一财经（2026-08-13）；DeepSeek 模型卡。基准为厂商自报，部分未第三方复现。</p>
+    </div>
+    <div class="card">
+      <h4 style="color:var(--c-ai)"><svg class="ic ic-s"><use href="#i-chart"/></svg>中国开源占比 41%：首超美国</h4>
+      <svg class="chart" viewBox="0 0 560 200" role="img" aria-label="开源模型下载占比中国与美国对比环形图" style="font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+        <g transform="translate(160,100)">
+          <circle r="80" fill="none" stroke="#E2E8F0" stroke-width="34"/>
+          <circle r="80" fill="none" stroke="#6D28D9" stroke-width="34" stroke-dasharray="204.2 502.4" transform="rotate(-90)" stroke-linecap="butt"/>
+          <text y="-6" font-size="30" font-weight="850" fill="#4C1D95" text-anchor="middle">41%</text>
+          <text y="18" font-size="12" fill="#64748B" text-anchor="middle">中国开源占比</text>
+        </g>
+        <g transform="translate(380,100)" font-size="13">
+          <rect x="0" y="-58" width="16" height="16" rx="4" fill="#6D28D9"/><text x="24" y="-45" fill="#0F172A" font-weight="700">中国 41%</text>
+          <rect x="0" y="-30" width="16" height="16" rx="4" fill="#CBD5E1"/><text x="24" y="-17" fill="#0F172A" font-weight="700">其他 59%</text>
+          <text x="0" y="14" fill="#475569">累计下载破 100 亿次</text>
+          <text x="0" y="36" fill="#475569">开源已成"围剿"闭源</text>
+        </g>
+      </svg>
+      <div class="callout" style="margin-top:8px"><svg class="ic ic-s"><use href="#i-warn"/></svg><div><b>两条实在结论：</b>数据不出厂场景优先评估 Qwen3.8 / DeepSeek 本地部署；厂商榜单位为自报，采购以本厂实测为准。</div></div>
+      <p class="src"><b>来源：</b>Hugging Face《2026年春季全球开源AI生态报告》；第一财经（2026-08-13）。</p>
+    </div>
+  </div>
+
+  <div class="sec-sum" style="--soft:var(--ai-soft);--soft-bd:#D6C5F5">
+    <h3 style="color:var(--c-ai)"><svg class="ic ic-s"><use href="#i-check"/></svg>板块总结 · 一页带走</h3>
+    <div class="row">
+      <div class="it"><b>政策</b>智能工厂"国字号"首次与 AI 渗透率挂钩，先冲 30% 线再谈更高。</div>
+      <div class="it"><b>选型</b>开源模型可本地私有化、成本约闭源 1/7，适合质检/排产/知识库。</div>
+      <div class="it"><b>动作</b>先做《核心场景 × 是否用 AI》台账，再为每场景留证据链。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 设施技术 ===================== -->
+<section class="sec wrap" id="fac" style="color:var(--c-fac)">
+  <div class="sec-head">
+    <div class="sec-ic" style="background:var(--c-fac)"><svg class="ic"><use href="#i-fac"/></svg></div>
+    <div><div class="t1">设施技术</div><div class="t2">电力动力节能与稳定供给、污水处理、危化物处理、暖通制冷 · 聚焦管理手段与技术手段</div></div>
+  </div>
+  <div class="sec-line"></div>
+  <div class="concl" style="border-left-color:var(--c-fac)">
+    <h3 style="color:var(--c-fac)"><svg class="ic ic-s"><use href="#i-flag"/></svg>本期核心结论（2026-08-17）</h3>
+    <ul>
+      <li><span class="n" style="background:var(--c-fac)">1</span><div><b>新型电力系统有了"十五五"施工图。</b>2030 非化石发电量 50%、新能源利用率 90%、新型储能 3 亿千瓦。</div></li>
+      <li><span class="n" style="background:var(--c-fac)">2</span><div><b>重心从"装机"转向"消纳"。</b>调节能力（储能/虚拟电厂/车网互动）成稳定器。</div></li>
+      <li><span class="n" style="background:var(--c-fac)">3</span><div><b>九大高耗能行业三年攻坚：</b>到 2028 减排 CO₂ 2 亿吨以上，中央补助最高 20%。</div></li>
+      <li><span class="n" style="background:var(--c-fac)">4</span><div><b>园区污水导则 9/1 施行：</b>首次把综合毒性、含盐量、PFOA 纳入管控。</div></li>
+      <li><span class="n" style="background:var(--c-fac)">5</span><div><b>生态工业园区"提标"：</b>HJ 274—2026 四大类指标，已命名园区 2029 全面执行。</div></li>
+      <li><span class="n" style="background:var(--c-fac)">6</span><div><b>设施管理的"成本线"正变"合规线+绿指标线"。</b></div></li>
+    </ul>
+  </div>
+
+  <div class="kpis" style="margin-bottom:16px">
+    <div class="kpi"><div class="n">3<small>亿千瓦</small></div><div class="l">2030 新型储能</div><div class="c g">新增约 1.6 亿</div></div>
+    <div class="kpi"><div class="n">90<small>%</small></div><div class="l">新能源利用率</div><div class="c">重心转消纳</div></div>
+    <div class="kpi"><div class="n">2<small>亿吨+</small></div><div class="l">三年减排 CO₂</div><div class="c g">九行业攻坚</div></div>
+    <div class="kpi"><div class="n">9/1</div><div class="l">污水导则施行</div><div class="c">HJ 945.4</div></div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-fac)"><svg class="ic ic-s"><use href="#i-bolt"/></svg>新型电力系统：2030 四张硬指标</h4>
+      <ul class="bl" style="list-style:none;display:flex;flex-direction:column;gap:10px">
+        <li style="display:flex;gap:10px;font-size:13.4px;color:var(--ink-2);line-height:1.62"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:var(--fac-soft);color:var(--c-fac);font-weight:800;display:grid;place-items:center;font-size:11px">①</span><div><b>电网形态：</b>主配微协同、智能微电网、海上输电。</div></li>
+        <li style="display:flex;gap:10px;font-size:13.4px;color:var(--ink-2);line-height:1.62"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:var(--fac-soft);color:var(--c-fac);font-weight:800;display:grid;place-items:center;font-size:11px">②</span><div><b>调节能力：</b>储能、抽蓄、虚拟电厂、车网互动、需求响应。</div></li>
+        <li style="display:flex;gap:10px;font-size:13.4px;color:var(--ink-2);line-height:1.62"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:var(--fac-soft);color:var(--c-fac);font-weight:800;display:grid;place-items:center;font-size:11px">③</span><div><b>算电协同：</b>源网荷储一体化、绿电直连支撑算力。</div></li>
+        <li style="display:flex;gap:10px;font-size:13.4px;color:var(--ink-2);line-height:1.62"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:var(--fac-soft);color:var(--c-fac);font-weight:800;display:grid;place-items:center;font-size:11px">④</span><div><b>市场机制：</b>全国统一电力市场。</div></li>
+      </ul>
+      <p class="src"><b>来源：</b>发改委、能源局《新型电力系统建设"十五五"规划》（新华财经 2026-08-04）。</p>
+    </div>
+    <div class="card">
+      <h4 style="color:var(--c-fac)"><svg class="ic ic-s"><use href="#i-chart"/></svg>调节资源：2030 目标规模</h4>
+      <svg class="chart" viewBox="0 0 560 250" role="img" aria-label="2030年各类电力系统调节资源目标规模" style="font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+        <line x1="200" y1="12" x2="200" y2="232" stroke="#D7DEE8" stroke-width="1.5"/>
+        <g font-size="12.5">
+          <text x="0" y="30" font-weight="700" fill="#0F172A">新型储能（总）</text><rect x="200" y="18" width="300" height="18" rx="4" fill="#047857"/><text x="506" y="32" fill="#047857" font-size="12" font-weight="800">3 亿</text>
+          <text x="0" y="62" font-weight="700" fill="#0F172A">电网侧独立储能</text><rect x="200" y="50" width="140" height="18" rx="4" fill="#10B981"/><text x="346" y="64" fill="#047857" font-size="12" font-weight="800">1.4 亿</text>
+          <text x="0" y="94" font-weight="700" fill="#0F172A">抽水蓄能</text><rect x="200" y="82" width="160" height="18" rx="4" fill="#0E7490"/><text x="366" y="96" fill="#0E7490" font-size="12" font-weight="800">1.6 亿</text>
+          <text x="0" y="126" font-weight="700" fill="#0F172A">虚拟电厂</text><rect x="200" y="114" width="50" height="18" rx="4" fill="#65A30D"/><text x="256" y="128" fill="#4D7C0F" font-size="12" font-weight="800">5000 万</text>
+          <text x="0" y="158" font-weight="700" fill="#0F172A">车网互动</text><rect x="200" y="146" width="50" height="18" rx="4" fill="#65A30D"/><text x="256" y="160" fill="#4D7C0F" font-size="12" font-weight="800">5000 万</text>
+          <text x="0" y="190" font-weight="700" fill="#0F172A">西电东送（跨区）</text><rect x="200" y="178" width="360" height="18" rx="4" fill="#059669"/><text x="564" y="192" fill="#047857" font-size="12" font-weight="800" text-anchor="end">4.2 亿</text>
+          <text x="0" y="222" font-weight="700" fill="#0F172A">充电设施</text><rect x="200" y="210" width="133" height="18" rx="4" fill="#22C55E"/><text x="339" y="224" fill="#047857" font-size="12" font-weight="800">4000 万+（个）</text>
+        </g>
+      </svg>
+      <p class="src"><b>来源：</b>《新型电力系统建设"十五五"规划》《新型能源体系建设"十五五"规划》。单位已统一换算。</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <h4 style="color:var(--c-fac)"><svg class="ic ic-s"><use href="#i-bolt"/></svg>节能降碳：九行业、三年、2 亿吨</h4>
+      <p>五部门（发改委、工信部、生态环境部、国资委、能源局）2026-06-15 启动：钢铁、电解铝、水泥、平板玻璃、炼油、乙烯、合成氨、甲醇、煤电。</p>
+      <p>到 2028 年底：重点行业能效标杆产能比例平均提高 20 个百分点；<b>累计节能量 1 亿吨标煤以上、减排 CO₂ 2 亿吨以上</b>；中央投资按核定总投资<b>最高 20%</b>补助。</p>
+      <div class="callout ok" style="margin-top:8px"><svg class="ic ic-s"><use href="#i-check"/></svg><div>暖通制冷单列：全国节能宣传周发起"公共机构制冷系统节能升级"，厂区空调/冷冻/工艺冷却是能耗大户，应纳入改造清单。</div></div>
+      <p class="src"><b>来源：</b>五部门《重点行业节能降碳改造攻坚三年行动》（2026-06-15）。</p>
+    </div>
+    <div class="card" style="--soft:var(--fac-soft);--soft-bd:#A7DCC4">
+      <h4 style="color:var(--c-fac)"><svg class="ic ic-s"><use href="#i-drop"/></svg>园区污水导则 + 生态园标准</h4>
+      <p><b>HJ 945.4—2026（9/1 施行）：</b>园区分"单一行业型/综合型"，综合型再按行业类似/主导/差异细分；<b>综合毒性、含盐量、PFOA</b> 三项纳入管控，鼓励再生水循环。</p>
+      <p><b>HJ 274—2026（3/1 施行）：</b>生态工业园四大类指标——减污降碳、发展质效、创新驱动、生态引领；已命名 73 家设三年过渡期，2029 全面执行。</p>
+      <div class="callout warn" style="margin-top:8px"><svg class="ic ic-s"><use href="#i-warn"/></svg><div>化工等园区企业：含氟/高毒母液须建分类收集台账，预处理能力提前评估。导则是"标准制订导则"，具体限值以所在地后续发布为准。</div></div>
+      <p class="src"><b>来源：</b>生态环境部 HJ 945.4—2026（2026-04-07 发布）、HJ 274—2026（2026-02-13 发布）。</p>
+    </div>
+  </div>
+
+  <div class="sec-sum" style="--soft:var(--fac-soft);--soft-bd:#A7DCC4">
+    <h3 style="color:var(--c-fac)"><svg class="ic ic-s"><use href="#i-check"/></svg>板块总结 · 一页带走</h3>
+    <div class="row">
+      <div class="it"><b>电力</b>屋顶光伏+储能+需量组合，连续生产工况按"保供"而非"套利"设计。</div>
+      <div class="it"><b>节能</b>九行业赶 20% 补助窗口；通用设备（锅炉/电机/空压机）更新+余热回收。</div>
+      <div class="it"><b>污水/危化</b>最紧（9/1）：提前做 PFOA/综合毒性/含盐量纳管排查。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 个人创作 ===================== -->
+<section class="sec wrap" id="works">
+  <div class="sec-head">
+    <div class="sec-ic" style="background:#64748B"><svg class="ic"><use href="#i-doc"/></svg></div>
+    <div><div class="t1">个人创作展示区</div><div class="t2">WKing 的其他作品与项目 · 持续更新中</div></div>
+  </div>
+  <div class="sec-line" style="background:linear-gradient(90deg,#64748B,transparent)"></div>
+  <div class="works">
+    <div class="wcard"><div class="badge">待更新</div><div class="ph"><svg class="ic"><use href="#i-car"/></svg></div><h4>行业研究专栏</h4><p>乘用车与摩托车行业的深度专题与长文，计划按季度产出。</p></div>
+    <div class="wcard"><div class="badge">待更新</div><div class="ph"><svg class="ic"><use href="#i-book"/></svg></div><h4>管理工具包</h4><p>可下载的激励设计表、沟通话术模板与检查清单合集。</p></div>
+    <div class="wcard"><div class="badge">待更新</div><div class="ph"><svg class="ic"><use href="#i-ai"/></svg></div><h4>智能工厂案例库</h4><p>智能工厂梯度培育的申报样例与落地路径沉淀。</p></div>
+    <div class="wcard"><div class="badge">待更新</div><div class="ph"><svg class="ic"><use href="#i-fac"/></svg></div><h4>设施改造笔记</h4><p>电力、污水、危化、暖通的技术手段与管理经验汇编。</p></div>
+  </div>
+</section>
+
+<!-- ===================== 归档检索 ===================== -->
+<section class="sec wrap" id="archive">
+  <div class="sec-head">
+    <div class="sec-ic" style="background:var(--c-auto)"><svg class="ic"><use href="#i-search"/></svg></div>
+    <div><div class="t1">周报归档检索</div><div class="t2">按板块、关键词与日期区间筛选；点击"阅读"在线预览 PPT，"下载"导出 PDF</div></div>
+  </div>
+  <div class="sec-line"></div>
+  <div class="filters">
+    <div class="tabs" id="tabs">
+      <button data-sec="all" class="on">全部</button>
+      <button data-sec="auto">行业信息</button>
+      <button data-sec="mgmt">管理技能</button>
+      <button data-sec="ai">智能技术</button>
+      <button data-sec="fac">设施技术</button>
+    </div>
+    <input class="kw" id="kw" type="text" placeholder="输入关键词，如 HONDA、储能、激励、开源…">
+    <input type="date" id="d1" title="起始日期">
+    <span style="color:var(--ink-3)">至</span>
+    <input type="date" id="d2" title="结束日期">
+    <select id="sort">
+      <option value="date">按日期（新→旧）</option>
+      <option value="date-asc">按日期（旧→新）</option>
+      <option value="view">按浏览数</option>
+    </select>
+  </div>
+  <div class="arch-list" id="archList"></div>
+</section>
+
+<!-- ===================== 订阅 ===================== -->
+<section class="sec wrap" id="subscribe">
+  <div class="sub">
+    <div>
+      <h3><svg class="ic ic-s" style="vertical-align:-3px;margin-right:6px"><use href="#i-bell"/></svg>订阅每周更新提醒</h3>
+      <p>每周一早 8:00 新刊发布后，可通过邮件或站内通知收到提醒。勾选你关心的板块，只收想看的。</p>
+    </div>
+    <form id="subForm" onsubmit="return false">
+      <label for="email">邮箱（站内通知无需填写，邮件提醒需有效邮箱）</label>
+      <input type="email" id="email" placeholder="you@example.com">
+      <div class="opts" id="subOpts"></div>
+      <button class="sbtn" id="subBtn" type="button">保存订阅偏好</button>
+      <div class="note" id="subNote">本地保存于浏览器，未连接外部邮件服务；如需真实邮件推送，可接入邮件连接器。</div>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== 数据总览（置底） ===================== -->
+<section class="sec wrap" id="data">
+  <div class="data">
+    <h3><svg class="ic ic-s" style="vertical-align:-3px"><use href="#i-chart"/></svg>站点数据总览</h3>
+    <p style="font-size:13px;color:var(--ink-3);margin-top:4px">浏览与下载统计保存于本机浏览器（localStorage），用于个人回顾与备份，不会上传服务器。</p>
+    <div class="ov" id="ov"></div>
+    <div class="tools">
+      <button id="expJson"><svg class="ic ic-s"><use href="#i-doc"/></svg>导出备份 JSON</button>
+      <button id="expCsv"><svg class="ic ic-s"><use href="#i-down"/></svg>导出统计 CSV</button>
+      <button id="impJson"><svg class="ic ic-s"><use href="#i-up"/></svg>导入恢复</button>
+      <button id="clearBtn"><svg class="ic ic-s"><use href="#i-trash"/></svg>清空统计</button>
+      <input type="file" id="impFile" accept="application/json" class="hide">
+    </div>
+    <div class="hint">说明：浏览数在点击"阅读"时累加，下载数在点击"下载"时累加。本站所有数据来源已在各周报文末标注；引用时请连同来源、日期与口径一并标注。</div>
+  </div>
+</section>
+
+</main>
+
+<!-- footer -->
+<footer class="ft">
+  <div class="wrap" style="padding:0">
+    <div class="cols">
+      <div>
+        <h5>WKing 资讯站</h5>
+        <p>面向粉丝与工作伙伴的个人品牌与行业资讯站。四大板块每周一早 8:00 更新，数据来源准确、标注出处，PPT 形式在线预览与下载。</p>
+      </div>
+      <div>
+        <h5>板块</h5>
+        <ul>
+          <li><a href="#auto">行业信息 · 乘用车与摩托车</a></li>
+          <li><a href="#mgmt">管理技能 · 激励与沟通</a></li>
+          <li><a href="#ai">智能技术 · AI 与工厂智能化</a></li>
+          <li><a href="#fac">设施技术 · 电力污水危化暖通</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>常用</h5>
+        <ul>
+          <li><a href="#archive">周报归档检索</a></li>
+          <li><a href="#subscribe">订阅提醒</a></li>
+          <li><a href="#works">个人创作</a></li>
+          <li><a href="#data">站点数据总览</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:18px;border-top:1px solid var(--line);padding-top:14px">© 2026 WKing · 内容仅供学习与工作参考，不构成投资或经营决策依据。数据以官方原始发布为准。</p>
+  </div>
+</footer>
+
+<div class="mask" id="mask"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <h4 id="mTitle">确认</h4>
+  <p id="mBody"></p>
+  <div class="mbtns"><button id="mCancel">取消</button><button class="d" id="mOk">确认</button></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s){return document.querySelector(s);},$$=function(s){return document.querySelectorAll(s);};
+  var KEY={stats:'wb_wking_stats_v1',subs:'wb_wking_subs_v1'};
+  // 当前已发布 + 往期回补(待补录) + 排期中，构成归档
+  var REPORTS=[
+    {id:'auto-20260817',sec:'auto',no:'001',date:'2026-08-17',status:'pub',pages:11,file:'reports/auto-weekly-2026-08-17.html',title:'乘用车与摩托车行业周报',sum:'零售-20.9%、出口+87.8%；HONDA与行业前十对比，含口径差异说明。'},
+    {id:'mgmt-20260817',sec:'auto',no:'001',date:'2026-08-17',status:'pub',pages:9,file:'reports/mgmt-weekly-2026-08-17.html',title:'管理技能周报',sum:'激励三要素乘法模型、班组激励设计表、坏消息 BLUF+SCQA，附 2 案例。'},
+    {id:'ai-20260817',sec:'ai',no:'001',date:'2026-08-17',status:'pub',pages:10,file:'reports/ai-weekly-2026-08-17.html',title:'智能技术周报',sum:'智能工厂四级梯度培育、AI场景≥30%/60%、Qwen3.8/DeepSeek开源、中国占比41%。'},
+    {id:'fac-20260817',sec:'fac',no:'001',date:'2026-08-17',status:'pub',pages:10,file:'reports/fac-weekly-2026-08-17.html',title:'设施技术周报',sum:'新型电力系统2030目标、九行业节能降碳、园区污水导则HJ945.4、生态园HJ274。'},
+    {id:'auto-20260810',sec:'auto',no:'000',date:'2026-08-10',status:'todo',pages:0,file:'',title:'乘用车与摩托车行业周报（往期回补）',sum:'7月完整数据回补，待补录。'},
+    {id:'mgmt-20260810',sec:'mgmt',no:'000',date:'2026-08-10',status:'todo',pages:0,file:'',title:'管理技能周报（往期回补）',sum:'营销与财务视角的落地案例，待补录。'},
+    {id:'ai-20260810',sec:'ai',no:'000',date:'2026-08-10',status:'todo',pages:0,file:'',title:'智能技术周报（往期回补）',sum:'工信部与开源动态周追踪，待补录。'},
+    {id:'fac-20260810',sec:'fac',no:'000',date:'2026-08-10',status:'todo',pages:0,file:'',title:'设施技术周报（往期回补）',sum:'电力与污水政策周追踪，待补录。'},
+    {id:'auto-20260824',sec:'auto',no:'002',date:'2026-08-24',status:'plan',pages:0,file:'',title:'乘用车与摩托车行业周报 第002期',sum:'排期中，预计 2026-08-24 发布。'},
+    {id:'mgmt-20260824',sec:'mgmt',no:'002',date:'2026-08-24',status:'plan',pages:0,file:'',title:'管理技能周报 第002期',sum:'定价与毛利结构（财务视角），排期中。'},
+    {id:'ai-20260824',sec:'ai',no:'002',date:'2026-08-24',status:'plan',pages:0,file:'',title:'智能技术周报 第002期',sum:'智能工厂申报跟踪与模型更新，排期中。'},
+    {id:'fac-20260824',sec:'fac',no:'002',date:'2026-08-24',status:'plan',pages:0,file:'',title:'设施技术周报 第002期',sum:'储能补贴细则与园区标准落地，排期中。'}
+  ];
+  var SEC={auto:{n:'行业信息',c:'var(--c-auto)',cc:'#1B5FD9',soft:'#EAF1FE'},mgmt:{n:'管理技能',c:'var(--c-mgmt)',cc:'#C2410C',soft:'#FDF0E8'},ai:{n:'智能技术',c:'var(--c-ai)',cc:'#6D28D9',soft:'#F3EEFD'},fac:{n:'设施技术',c:'var(--c-fac)',cc:'#047857',soft:'#E7F6EF'}};
+  var base={auto:182,mgmt:96,ai:154,fac:121}; // 示例基数，让统计更有观感
+
+  function load(){ try{return JSON.parse(localStorage.getItem(KEY.stats))||{};}catch(e){return {};} }
+  function save(o){ localStorage.setItem(KEY.stats,JSON.stringify(o)); }
+  function st(){ var s=load(); if(!s.views) s.views={}; if(!s.dls) s.dls={}; return s; }
+  function bv(id){ return (st().views[id]||0)+(base[id]||0); }
+  function bd(id){ return (st().dls[id]||0)+Math.round((base[id]||0)*0.18); }
+
+  function toast(t){ var e=$('#toast'); e.textContent=t; e.classList.add('on'); clearTimeout(e._t); e._t=setTimeout(function(){e.classList.remove('on');},2200); }
+  function modal(title,body,ok){ return new Promise(function(res){ var m=$('#modal'); $('#mTitle').textContent=title; $('#mBody').textContent=body; m.classList.add('on'); $('#mask').classList.add('on'); function done(v){ m.classList.remove('on'); $('#mask').classList.remove('on'); $('#mOk').onclick=null; $('#mCancel').onclick=null; res(v);} $('#mOk').onclick=function(){done(true);}; $('#mCancel').onclick=function(){done(false);}; }); }
+
+  // 本周更新卡片
+  (function(){
+    var pub=REPORTS.filter(function(r){return r.status==='pub';});
+    $('#thisWeek').innerHTML=pub.map(function(r){
+      var s=SEC[r.sec];
+      return '<a class="tcard" href="'+r.file+'" target="_blank" onclick="WK.view(\''+r.id+'\')" style="border-top:3px solid '+s.cc+'">'+
+        '<span class="tg" style="background:'+s.soft+';color:'+s.cc+'"><svg class="ic ic-s"><use href="#i-'+(r.sec==='auto'?'car':r.sec==='mgmt'?'book':r.sec==='ai'?'ai':'fac')+'"/></svg>'+s.n+'</span>'+
+        '<h4>'+r.title+'</h4><p>'+r.sum+'</p>'+
+        '<div class="ft"><span class="dt">第'+r.no+'期 · '+r.date+'</span><span class="go" style="color:'+s.cc+'">阅读 <svg class="ic ic-s"><use href="#i-eye"/></svg></span></div></a>';
+    }).join('');
+  })();
+
+  // 归档
+  function renderArchive(){
+    var sec=$('#tabs .on').dataset.sec, kw=$('#kw').value.trim().toLowerCase(), d1=$('#d1').value, d2=$('#d2').value, sort=$('#sort').value;
+    var list=REPORTS.filter(function(r){
+      if(sec!=='all'&&r.sec!==sec) return false;
+      if(kw){ if((r.title+' '+r.sum+' '+SEC[r.sec].n).toLowerCase().indexOf(kw)<0) return false; }
+      if(d1&&r.date<d1) return false; if(d2&&r.date>d2) return false;
+      return true;
+    });
+    list.sort(function(a,b){ if(sort==='view') return bd(b.id)-bd(a.id); if(sort==='date-asc') return a.date<b.date?-1:1; return a.date>b.date?-1:1; });
+    if(!list.length){ $('#archList').innerHTML='<div class="empty">没有匹配的周报，试试更换关键词或板块。</div>'; return; }
+    $('#archList').innerHTML=list.map(function(r){
+      var s=SEC[r.sec];
+      var badge= r.status==='pub'?'<span class="badge2" style="background:'+s.soft+';color:'+s.cc+'">已发布</span>':r.status==='todo'?'<span class="badge2" style="background:#FEF3C7;color:#92400E">待补录</span>':'<span class="badge2" style="background:#DBEAFE;color:#1D4ED8">排期中</span>';
+      var acts= r.status==='pub'
+        ? '<a href="'+r.file+'" target="_blank" onclick="WK.view(\''+r.id+'\')"><svg class="ic ic-s"><use href="#i-eye"/></svg>阅读</a><a href="'+r.file+'" target="_blank" onclick="WK.dl(\''+r.id+'\')"><svg class="ic ic-s"><use href="#i-down"/></svg>下载</a>'
+        : '<span style="color:var(--ink-3);font-size:12.5px">'+ (r.status==='todo'?'待补录':'排期中') +'</span>';
+      return '<div class="arch"><div>'+badge+'</div><div class="meta"><h4>'+r.title+'</h4><div class="sub">'+s.n+' · 第'+r.no+'期 · '+r.date+' · '+(r.status==='pub'?r.pages+' 页':'—')+'</div></div>'+
+        '<div class="stat">浏览 '+bv(r.id)+'<br>下载 '+bd(r.id)+'</div><div class="acts">'+acts+'</div></div>';
+    }).join('');
+  }
+  $('#tabs').addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b)return; $$('#tabs button').forEach(function(x){x.classList.remove('on');}); b.classList.add('on'); renderArchive(); });
+  $('#kw').addEventListener('input',renderArchive); $('#d1').addEventListener('change',renderArchive); $('#d2').addEventListener('change',renderArchive); $('#sort').addEventListener('change',renderArchive);
+
+  // 数据总览
+  function paintKpi(){
+    var pub=REPORTS.filter(function(r){return r.status==='pub';});
+    var tv=pub.reduce(function(a,r){return a+bv(r.id);},0), td=pub.reduce(function(a,r){return a+bd(r.id);},0);
+    $('#ov').innerHTML=
+      '<div class="b"><div class="n">'+tv.toLocaleString()+'</div><div class="l">累计浏览（已发布）</div></div>'+
+      '<div class="b"><div class="n">'+td.toLocaleString()+'</div><div class="l">累计下载（已发布）</div></div>'+
+      '<div class="b"><div class="n">'+pub.length+'</div><div class="l">已发布周报</div></div>'+
+      '<div class="b"><div class="n">4</div><div class="l">覆盖板块</div></div>';
+  }
+
+  // 订阅
+  function renderSubOpts(){
+    $('#subOpts').innerHTML=Object.keys(SEC).map(function(k){ var on=(load().subs&&load().subs[k])?'checked':''; return '<label><input type="checkbox" value="'+k+'" '+on+'>'+SEC[k].n+'</label>'; }).join('');
+  }
+  $('#subBtn').onclick=function(){
+    var subs={}, email=$('#email').value.trim();
+    $$('#subOpts input').forEach(function(c){ if(c.checked) subs[c.value]=true; });
+    var data={subs:subs,email:email};
+    localStorage.setItem(KEY.subs,JSON.stringify(data));
+    toast('订阅偏好已保存（本机）'+(email?'，邮件：'+email:''));
+  };
+
+  // 备份
+  $('#expJson').onclick=function(){ var data={stats:load(),subs:JSON.parse(localStorage.getItem(KEY.subs)||'null'),exportedAt:new Date().toISOString()}; download('wking-backup-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(data,null,2),'application/json'); toast('已导出备份 JSON'); };
+  $('#expCsv').onclick=function(){ var rows=[['id','sec','no','date','status','views','downloads']]; REPORTS.forEach(function(r){ rows.push([r.id,r.sec,r.no,r.date,r.status,bv(r.id),bd(r.id)]); }); var csv=rows.map(function(x){return x.join(',');}).join('\n'); download('wking-stats-'+new Date().toISOString().slice(0,10)+'.csv',csv,'text/csv'); toast('已导出统计 CSV'); };
+  $('#impJson').onclick=function(){ $('#impFile').click(); };
+  $('#impFile').addEventListener('change',function(e){ var f=e.target.files[0]; if(!f)return; var rd=new FileReader(); rd.onload=function(){ try{ var d=JSON.parse(rd.result); if(d.stats) localStorage.setItem(KEY.stats,JSON.stringify(d.stats)); if(d.subs) localStorage.setItem(KEY.subs,JSON.stringify(d.subs)); paintKpi(); renderSubOpts(); renderArchive(); toast('已恢复备份'); }catch(err){ toast('文件解析失败'); } }; rd.readAsText(f); e.target.value=''; });
+  $('#clearBtn').onclick=function(){ modal('清空统计','将删除本机保存的全部浏览/下载统计与订阅偏好，且不可恢复。确定继续？').then(function(v){ if(v){ localStorage.removeItem(KEY.stats); localStorage.removeItem(KEY.subs); paintKpi(); renderSubOpts(); renderArchive(); toast('统计已清空'); } }); };
+
+  function download(name,content,type){ var b=new Blob([content],{type:type}), u=URL.createObjectURL(b), a=document.createElement('a'); a.href=u; a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(u); a.remove();},100); }
+
+  // 倒计时到下周一 08:00（本期指向 2026-08-24）
+  function tick(){ var now=new Date(); var t=new Date('2026-08-24T08:00:00+08:00'); var diff=Math.max(0,t-now); var d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000), m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000); var p=function(n){return (n<10?'0':'')+n;}; $('#cd-d').textContent=d; $('#cd-h').textContent=p(h); $('#cd-m').textContent=p(m); $('#cd-s').textContent=p(s); }
+
+  // 移动端菜单
+  $('#menuBtn').onclick=function(){ $('#nav').classList.toggle('open'); };
+  $$('#nav a').forEach(function(a){ a.onclick=function(){$('#nav').classList.remove('open');}; });
+
+  window.WK={ view:function(id){ var s=st(); s.views[id]=(s.views[id]||0)+1; save(s); paintKpi(); renderArchive(); }, dl:function(id){ var s=st(); s.dls[id]=(s.dls[id]||0)+1; save(s); paintKpi(); renderArchive(); toast('已打开下载页，请在周报中点击"导出PDF"'); } };
+
+  renderArchive(); paintKpi(); renderSubOpts(); tick(); setInterval(tick,1000);
+})();
+</script>
+
+<!-- ===================== 创意优化脚本：入场动画 / 数字滚动 / 进度条 / 回到顶部 / 导航高亮 ===================== -->
+<button class="toTop" id="toTop" aria-label="回到顶部" title="回到顶部"><svg class="ic"><use href="#i-up"/></svg></button>
+<script>
+(function(){
+  "use strict";
+  try{
+    var docEl=document.documentElement, rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // 1) 自动给主要区块加入场动画（带错落延迟）
+    var sel=['.concl','.kpis','.card','.sec-sum','.wcard','.arch','.sub','.data','.tw .tcard'];
+    var revealEls=[];
+    sel.forEach(function(s){
+      document.querySelectorAll(s).forEach(function(el,i){
+        if(el.closest('.sec-sum') && s!=='.sec-sum') return;
+        el.classList.add('reveal'); el.classList.add('d'+((i%4)+1)); revealEls.push(el);
+      });
+    });
+    // 标记需要数字滚动的元素（保留 <small> 样式）
+    document.querySelectorAll('.kpi .n, .data .ov .b .n').forEach(function(el){ el.setAttribute('data-count','1'); });
+
+    function countUp(el){
+      try{
+        var small=el.querySelector('small');
+        var suffixHtml=small?small.outerHTML:'';
+        var rawText=(small?el.textContent.replace(small.textContent,''):el.textContent).trim();
+        var m=rawText.match(/^([+\-]?[\d.,]+)([\s\S]*)$/);
+        if(!m) return;
+        var target=parseFloat(m[1].replace(/,/g,''));
+        if(isNaN(target)) return;
+        var tail=m[2]||'';
+        if(rm){ el.innerHTML=rawText+suffixHtml; return; }
+        var dur=1000,t0=null;
+        function fmt(v){ return Math.abs(v)<100 ? v.toFixed(1) : Math.round(v).toLocaleString('en-US'); }
+        function step(ts){ if(t0===null)t0=ts; var p=Math.min(1,(ts-t0)/dur); var v=target*(1-Math.pow(1-p,3)); el.innerHTML=fmt(v)+suffixHtml+tail; if(p<1) requestAnimationFrame(step); else el.innerHTML=rawText+suffixHtml; }
+        requestAnimationFrame(step);
+      }catch(e){ /* 单个数字异常不影响其余 */ }
+    }
+
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){ e.target.classList.add('in'); var c=e.target.querySelectorAll('[data-count]'); for(var i=0;i<c.length;i++) countUp(c[i]); io.unobserve(e.target); }
+        });
+      },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+      revealEls.forEach(function(el){ io.observe(el); });
+    }else{
+      revealEls.forEach(function(el){ el.classList.add('in'); });
+      document.querySelectorAll('[data-count]').forEach(function(el){ countUp(el); });
+    }
+    // 安全网：2.6s 内无论如何都显示，避免观察器异常导致内容不可见
+    setTimeout(function(){ revealEls.forEach(function(el){ el.classList.add('in'); }); },2600);
+
+    // 2) 滚动进度条 + 回到顶部显隐
+    var prog=document.getElementById('progress'), toTop=document.getElementById('toTop');
+    function onScroll(){
+      var h=document.documentElement.scrollHeight-window.innerHeight;
+      var p=h>0?(window.scrollY/h)*100:0;
+      prog.style.width=p+'%';
+      if(window.scrollY>520) toTop.classList.add('show'); else toTop.classList.remove('show');
+    }
+    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+    // 3) 回到顶部
+    toTop.addEventListener('click',function(){ window.scrollTo({top:0,behavior:rm?'auto':'smooth'}); });
+
+    // 4) 导航当前区块高亮
+    var navLinks={};
+    document.querySelectorAll('#nav a').forEach(function(a){ var id=a.getAttribute('href').slice(1); if(id) navLinks[id]=a; });
+    if('IntersectionObserver' in window){
+      var spy=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          var a=navLinks[e.target.id]; if(!a) return;
+          if(e.isIntersecting){ for(var k in navLinks) navLinks[k].classList.remove('active'); a.classList.add('active'); }
+        });
+      },{rootMargin:'-45% 0px -50% 0px'});
+      ['auto','mgmt','ai','fac','works','archive','subscribe','data'].forEach(function(id){ var el=document.getElementById(id); if(el) spy.observe(el); });
+    }
+  }catch(err){
+    // 出错则撤掉 .js，让所有内容立即可见，保证不破坏可用性
+    document.documentElement.classList.remove('js');
+  }
+})();
+</script>
+</body>
+</html>

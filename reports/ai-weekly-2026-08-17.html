@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>智能技术 第001期：AI与工厂智能化行业周报（2026-08-17）| WKing</title>
+<meta name="description" content="工信部等六部门发布《2026年度智能工厂梯度培育行动》（工信厅联通装函〔2026〕343号）：基础级/先进级/卓越级/领航级四级递进，卓越级AI场景比例≥30%、领航级≥60%，8月15日申报、9月1日推荐截止。同期阿里Qwen3.8-2.4T、DeepSeek V4 Pro、Meta Muse Glimmer密集开源，中国开源模型下载占比达41%首超美国。">
+<meta name="keywords" content="智能工厂,梯度培育,工信厅联通装函343号,AI场景比例,开源大模型,Qwen3.8,DeepSeek V4 Pro,工厂智能化,智能制造">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="智能技术 第001期：智能工厂梯度培育 + 开源大模型密集更新">
+<meta property="og:description" content="六部门智能工厂梯度培育行动落地；Qwen3.8/DeepSeek V4 Pro/Muse Glimmer同期开源，中国开源占比首超美国。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236D28D9'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Report","headline":"智能技术 第001期：AI与工厂智能化行业周报","datePublished":"2026-08-17T08:00:00+08:00","inLanguage":"zh-CN","author":{"@type":"Person","name":"WKing"},"about":["智能工厂梯度培育","开源大模型","工厂智能化"],"citation":["工业和信息化部等六部门《关于开展2026年度智能工厂梯度培育行动的通知》（工信厅联通装函〔2026〕343号）","Hugging Face《2026年春季全球开源AI生态报告》","阿里云 ModelScope / Hugging Face Qwen3.8-2.4T-A95B 发布说明","DeepSeek-V4-Pro-0813 模型卡与API文档"]}
+</script>
+<style>
+:root{
+  --bg:#F1EEF8; --ink:#0E1726; --ink-2:#4A5568; --ink-3:#8A94A6; --line:#E7E1F1; --line-2:#F4F1F9;
+  --c:#6D28D9; --cs:#F3EEFD; --cd:#4C1D95; --up:#D92D20; --dn:#079455; --wa:#B54708; --wasoft:#FFFAEB;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);overflow:hidden}
+button{font-family:inherit;cursor:pointer}
+.ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.ic-s{width:15px;height:15px}
+
+/* ---- chrome ---- */
+.bar{position:fixed;left:0;right:0;height:52px;display:flex;align-items:center;gap:10px;padding:0 16px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);z-index:50;border-bottom:1px solid var(--line)}
+.bar.top{top:0}
+.bar.bot{bottom:0;border-bottom:0;border-top:1px solid var(--line)}
+.tag{display:inline-flex;align-items:center;gap:6px;background:var(--cs);color:var(--c);font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.tt{font-size:13.5px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp{flex:1}
+.cbtn{min-width:38px;height:38px;padding:0 11px;border:1px solid var(--line);background:#fff;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--ink-2);font-size:13px;font-weight:700;transition:.16s;text-decoration:none}
+.cbtn:hover{border-color:var(--c);color:var(--c)}
+.cbtn.p{background:var(--cd);color:#fff;border-color:transparent}
+.pg{font-size:13px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink-2);min-width:56px;text-align:center}
+#pbar{position:fixed;left:0;bottom:52px;height:3px;background:linear-gradient(90deg,var(--c),#DB2777);width:0;z-index:51;transition:width .25s}
+
+/* ---- deck ---- */
+.viewport{position:fixed;inset:52px 0;display:grid;place-items:center;overflow:hidden}
+.stage{width:1280px;height:720px;position:relative;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(76,29,149,.18);overflow:hidden;transform-origin:center center}
+.slide{position:absolute;inset:0;padding:44px 56px 52px;display:flex;flex-direction:column;opacity:0;transform:translateX(26px);transition:opacity .3s,transform .3s;pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.sn{position:absolute;right:26px;bottom:16px;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--c);text-transform:uppercase}
+.s-title{font-size:31px;font-weight:800;letter-spacing:-.6px;line-height:1.25;margin:6px 0 4px}
+.s-sub{font-size:15px;color:var(--ink-2);line-height:1.6}
+.hr{height:1px;background:var(--line);margin:16px 0}
+.body{flex:1;min-height:0}
+.src{margin-top:auto;padding-top:12px;font-size:11.6px;color:var(--ink-3);line-height:1.6;border-top:1px dashed var(--line)}
+.src b{color:var(--ink-2);font-weight:750}
+
+/* cover */
+.cover{background:linear-gradient(145deg,#4C1D95 0%,#6D28D9 52%,#7C3AED 100%);color:#fff;justify-content:center;padding:0 74px}
+.cover .eyebrow{color:#D8C7FB}
+.cover h1{font-size:45px;font-weight:800;line-height:1.22;letter-spacing:-1.1px;margin:14px 0 18px;max-width:960px}
+.cover .lead{font-size:17px;color:rgba(255,255,255,.87);max-width:820px;line-height:1.75}
+.cover .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:32px;font-size:13.5px;color:rgba(255,255,255,.8)}
+.cover .meta i{display:flex;align-items:center;gap:7px;font-style:normal}
+.cover .kv{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.cover .kv div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:11px 15px}
+.cover .kv b{display:block;font-size:19px;font-weight:800;font-variant-numeric:tabular-nums}
+.cover .kv span{font-size:11.8px;color:rgba(255,255,255,.72)}
+.wm{position:absolute;right:-70px;bottom:-90px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 66%)}
+
+/* blocks */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;height:100%}
+.g2.a{grid-template-columns:.95fr 1.05fr}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.kpi{background:#FBFAFE;border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.kpi .n{font-size:27px;font-weight:800;letter-spacing:-.8px;font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi .l{font-size:12.4px;color:var(--ink-3);font-weight:650;margin-top:5px}
+.kpi .c{font-size:13px;font-weight:800;margin-top:6px;display:flex;align-items:center;gap:4px}
+.r{color:var(--up)} .g{color:var(--dn)}
+.card{background:#FBFAFE;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card.hi{background:var(--cs);border-color:#D6C5F5}
+.card h4{font-size:15px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.card h4 svg{color:var(--c)}
+.card p{font-size:13.4px;color:var(--ink-2);line-height:1.72}
+.card p+p{margin-top:7px}
+ul.bl{list-style:none;display:flex;flex-direction:column;gap:11px}
+ul.bl li{display:flex;gap:11px;font-size:14.2px;line-height:1.7;color:var(--ink-2)}
+ul.bl li b{color:var(--ink)}
+ul.bl .num{flex:0 0 auto;width:23px;height:23px;border-radius:7px;background:var(--cd);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center;margin-top:3px}
+ul.bl.dot .num{background:var(--cs);color:var(--c)}
+table.tbl{width:100%;border-collapse:collapse;font-size:12.9px}
+table.tbl th{background:#F5F1FC;color:var(--ink-2);font-size:11.6px;font-weight:800;letter-spacing:.3px;text-align:left;padding:9px 11px;border-bottom:1px solid var(--line)}
+table.tbl td{padding:9px 11px;border-bottom:1px solid var(--line-2);color:var(--ink-2);vertical-align:top}
+table.tbl tr:last-child td{border-bottom:0}
+table.tbl td b{color:var(--ink)}
+table.tbl tr.em td{background:#F9F5FE}
+.callout{background:var(--wasoft);border:1px solid #FEDF89;border-radius:12px;padding:13px 15px;font-size:13.4px;color:#93370D;line-height:1.7;display:flex;gap:10px}
+.callout svg{color:var(--wa);margin-top:2px}
+.callout.ok{background:#ECFDF3;border-color:#A6F4C5;color:#054F31}
+.callout.ok svg{color:var(--dn)}
+.chart{width:100%;height:auto}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:800;background:var(--cs);color:var(--c)}
+.badge.gray{background:#F2F4F7;color:var(--ink-2)}
+.srclist{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.srci{background:#FBFAFE;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:12.6px;color:var(--ink-2);line-height:1.65}
+.srci strong{display:block;font-size:13.2px;color:var(--ink);font-weight:750;margin-bottom:2px}
+
+/* ---- toc ---- */
+.mask{position:fixed;inset:0;background:rgba(28,16,46,.45);z-index:60;opacity:0;pointer-events:none;transition:.22s}
+.mask.on{opacity:1;pointer-events:auto}
+.toc{position:fixed;left:0;top:0;height:100%;width:min(340px,88vw);background:#fff;z-index:70;transform:translateX(-102%);transition:transform .26s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+.toc.on{transform:none}
+.toc-h{padding:16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:9px}
+.toc-h h3{font-size:16px;font-weight:800;flex:1}
+.toc-b{overflow-y:auto;padding:10px}
+.ti{display:flex;gap:10px;padding:10px 11px;border-radius:9px;font-size:13.4px;color:var(--ink-2);cursor:pointer;align-items:center}
+.ti:hover{background:#F5F1FC}
+.ti.on{background:var(--cs);color:var(--c);font-weight:750}
+.ti span.i{width:22px;height:22px;border-radius:6px;background:#F1EEF8;font-size:11.5px;font-weight:800;display:grid;place-items:center;flex:0 0 auto}
+.ti.on span.i{background:#fff;color:var(--c)}
+
+/* ---- doc mode (mobile) ---- */
+body.doc{overflow:auto;background:#F5F3FA}
+body.doc .viewport{position:static;inset:auto;display:block;overflow:visible;padding:62px 0 66px}
+body.doc .stage{width:auto;max-width:820px;margin:0 auto;height:auto;transform:none!important;border-radius:0;box-shadow:none;background:transparent}
+body.doc .slide{position:relative;inset:auto;opacity:1;transform:none;pointer-events:auto;background:#fff;border:1px solid var(--line);border-radius:14px;margin:0 12px 12px;padding:20px 17px 22px;min-height:0}
+body.doc .sn{position:static;text-align:right;margin-top:10px}
+body.doc .s-title{font-size:21px;letter-spacing:-.3px}
+body.doc .s-sub{font-size:13.6px}
+body.doc .cover{padding:26px 20px;border-radius:14px}
+body.doc .cover h1{font-size:24px;letter-spacing:-.3px}
+body.doc .cover .lead{font-size:14px}
+body.doc .cover .meta{gap:12px;font-size:12.2px;margin-top:18px}
+body.doc .cover .kv b{font-size:16px}
+body.doc .g2,body.doc .g2.a,body.doc .g3,body.doc .kpis,body.doc .srclist{grid-template-columns:1fr;gap:11px;height:auto}
+body.doc .kpi .n{font-size:24px}
+body.doc ul.bl li{font-size:13.8px}
+body.doc table.tbl{font-size:12.2px}
+body.doc table.tbl th,body.doc table.tbl td{padding:7px 8px}
+body.doc .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+body.doc #pbar{display:none}
+body.doc .navb{display:none}
+body.doc .bar.bot{justify-content:center;padding-bottom:env(safe-area-inset-bottom)}
+
+/* ---- print ---- */
+@media print{
+  @page{size:A4 landscape;margin:0}
+  body{background:#fff;overflow:visible}
+  .bar,#pbar,.toc,.mask{display:none!important}
+  .viewport{position:static;inset:auto;display:block;overflow:visible}
+  .stage{width:1280px;height:auto;box-shadow:none;border-radius:0;transform:none!important}
+  .slide{position:relative;inset:auto;opacity:1;transform:none;height:720px;page-break-after:always;break-after:page;border:0}
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+<symbol id="i-ai" viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="11" rx="3"/><path d="M12 7V4M9 3.2h6M9 18v2M15 18v2M2.5 11v3M21.5 11v3"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-l" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+<symbol id="i-r" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3.5h10V8"/><rect x="4" y="8" width="16" height="8" rx="2"/><path d="M7 14h10v6.5H7z"/></symbol>
+<symbol id="i-full" viewBox="0 0 24 24"><path d="M4 9V4h5M20 15v5h-5M15 4h5v5M9 20H4v-5"/></symbol>
+<symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4 2.8 20h18.4z"/><path d="M12 10v4M12 17h.01"/></symbol>
+<symbol id="i-src" viewBox="0 0 24 24"><path d="M4 6.5C4 5 6.7 4 10 4s6 1 6 2.5v11C16 19 13.3 20 10 20s-6-1-6-2.5z"/><path d="M4 12c0 1.5 2.7 2.5 6 2.5s6-1 6-2.5"/><path d="M19 9v9.5"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 20v-7M13 20V8M18 20v-4"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M6 21V4"/><path d="M6 4h11l-2 4 2 4H6"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12S18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.7"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.8V18h7v-4.2A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M13.5 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10A1.5 1.5 0 0 0 18.5 19V8.5z"/><path d="M13.5 3.5v5h5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></symbol>
+<symbol id="i-net" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4"/><circle cx="12" cy="4.4" r="2.1"/><circle cx="19.2" cy="16" r="2.1"/><circle cx="4.8" cy="16" r="2.1"/><path d="M12 6.5v3.1M13.6 13.4 17.6 15M10.4 13.4 6.4 15"/></symbol>
+</svg>
+
+<div class="bar top">
+  <span class="tag"><svg class="ic ic-s"><use href="#i-ai"/></svg>智能技术</span>
+  <span class="tt">AI 与工厂智能化周报 · 第001期 · 2026-08-17</span>
+  <span class="sp"></span>
+  <button class="cbtn" id="tocBtn"><svg class="ic ic-s"><use href="#i-menu"/></svg>目录</button>
+  <button class="cbtn" id="modeBtn"><svg class="ic ic-s"><use href="#i-doc"/></svg><span id="modeTxt">阅读模式</span></button>
+  <button class="cbtn" id="fsBtn"><svg class="ic ic-s"><use href="#i-full"/></svg></button>
+  <button class="cbtn" id="prBtn"><svg class="ic ic-s"><use href="#i-print"/></svg>导出PDF</button>
+  <a class="cbtn p" href="../index.html"><svg class="ic ic-s"><use href="#i-home"/></svg>返回主站</a>
+</div>
+
+<div class="viewport"><div class="stage" id="stage">
+
+<!-- 1 cover -->
+<section class="slide cover on">
+  <div class="wm"></div>
+  <div class="eyebrow">WKING WEEKLY · 智能技术 · ISSUE 001</div>
+  <h1>智能工厂有了"国字号"跑道，<br>开源大模型同周集中放量</h1>
+  <p class="lead">本期看两件事：工信部等六部门发布《2026年度智能工厂梯度培育行动》，把智能工厂分成四级、明确 AI 场景占比硬指标，8月15日就开申报；与此同时 Qwen3.8、DeepSeek V4 Pro、Meta Muse Glimmer 在三天内密集开源，中国开源模型下载占比首次超过美国。</p>
+  <div class="kv">
+    <div><b>≥30% / ≥60%</b><span>卓越级 / 领航级 AI 场景占比</span></div>
+    <div><b>08-15 / 09-01</b><span>申报 / 推荐截止</span></div>
+    <div><b>2.4万亿</b><span>Qwen3.8 参数（开源）</span></div>
+    <div><b>41%</b><span>中国开源占比（首超美国）</span></div>
+  </div>
+  <div class="meta">
+    <i><svg class="ic ic-s"><use href="#i-clock"/></svg>2026年8月17日 08:00 发布</i>
+    <i><svg class="ic ic-s"><use href="#i-src"/></svg>工信部 / Hugging Face / 阿里云 / DeepSeek</i>
+    <i><svg class="ic ic-s"><use href="#i-eye"/></svg>全篇 10 页，约 6 分钟</i>
+  </div>
+  <div class="sn">01 / 10</div>
+</section>
+
+<!-- 2 速览 -->
+<section class="slide">
+  <div class="eyebrow">Executive Summary</div>
+  <h2 class="s-title">本期速览：5 条结论</h2>
+  <div class="hr"></div>
+  <div class="body">
+    <ul class="bl">
+      <li><span class="num">1</span><div><b>智能工厂进入"四级梯队"时代。</b>六部门《2026年度智能工厂梯度培育行动》（工信厅联通装函〔2026〕343号，7月15日印发）按基础级→先进级→卓越级→领航级逐级培育，全流程在智能制造数据资源公共服务平台（miit-imps.com）线上开展。</div></li>
+      <li><span class="num">2</span><div><b>AI 场景占比成为硬门槛。</b>卓越级要求"应用人工智能技术场景比例不低于 30%"，领航级不低于 60%——这是首次把 AI 渗透率写进国家级认定条件，意味着智能工厂从"上系统"转向"真用 AI"。</div></li>
+      <li><span class="num">3</span><div><b>申报窗口很紧。</b>申报主体 8月15日前线上申请、推荐单位 9月1日前完成审核；各省按 2025 年工业增加值排名分档（前10名≤40个、11—20名≤30个、其他≤20个，兵团与央企≤5个），名额有限先到先得。</div></li>
+      <li><span class="num">4</span><div><b>开源大模型三天内密集放量。</b>8月12—13日，DeepSeek V4 Pro 正式版（1.6万亿参数、MIT 开源）上线，阿里开放 Qwen3.8-2.4T-A95B 权重（2.4万亿参数，Qwen-Max 级首次开源），Meta 发布 Muse Glimmer（约300亿参数本地 Agent 模型）。</div></li>
+      <li><span class="num">5</span><div><b>中国开源生态首超美国。</b>据 Hugging Face《2026年春季全球开源AI生态报告》，中国开源模型下载占比达 41%，首次超过美国，累计下载量突破 100 亿次——对工厂本地私有化部署是实质性利好。</div></li>
+    </ul>
+  </div>
+  <div class="src"><b>来源：</b>工业和信息化部等六部门《关于开展2026年度智能工厂梯度培育行动的通知》（工信厅联通装函〔2026〕343号，2026-07-15）；Hugging Face《2026年春季全球开源AI生态报告》；阿里云 ModelScope / 智东西 / 网易号；DeepSeek API 文档与模型卡；第一财经（2026-08-13）。</div>
+  <div class="sn">02 / 10</div>
+</section>
+
+<!-- 3 梯度培育四级 -->
+<section class="slide">
+  <div class="eyebrow">Policy · 重点</div>
+  <h2 class="s-title">智能工厂梯度培育：四级递进，AI 是分水岭</h2>
+  <p class="s-sub">从"企业自评"到"全球标杆"，每一级都有明确的晋级条件与 AI 场景占比要求</p>
+  <div class="hr"></div>
+  <div class="body">
+    <svg class="chart" viewBox="0 0 1160 300" role="img" aria-label="智能工厂四级梯度培育递进图">
+      <g font-family="var(--font)">
+        <rect x="20" y="32" width="262" height="232" rx="14" fill="#F3EEFD" stroke="#D6C5F5"/>
+        <text x="151" y="62" font-size="15" font-weight="800" fill="#4C1D95" text-anchor="middle">基础级</text>
+        <text x="151" y="88" font-size="12" fill="#6D28D9" text-anchor="middle">数字化转型</text>
+        <text x="151" y="118" font-size="11.6" fill="#4A5568" text-anchor="middle">规上企业自愿</text>
+        <text x="151" y="136" font-size="11.6" fill="#4A5568" text-anchor="middle">自评自建</text>
+        <text x="151" y="170" font-size="11.6" fill="#8A94A6" text-anchor="middle">无 AI 占比门槛</text>
+        <text x="151" y="232" font-size="11.4" fill="#8A94A6" text-anchor="middle">数据源：核心工序</text>
+        <text x="151" y="250" font-size="11.4" fill="#8A94A6" text-anchor="middle">自动化采集</text>
+
+        <rect x="312" y="20" width="262" height="244" rx="14" fill="#EDE6FB" stroke="#C9B2F0"/>
+        <text x="443" y="50" font-size="15" font-weight="800" fill="#4C1D95" text-anchor="middle">先进级</text>
+        <text x="443" y="76" font-size="12" fill="#6D28D9" text-anchor="middle">数字化+网络化</text>
+        <text x="443" y="106" font-size="11.6" fill="#4A5568" text-anchor="middle">省级/央企认定</text>
+        <text x="443" y="124" font-size="11.6" fill="#4A5568" text-anchor="middle">后报工信部</text>
+        <text x="443" y="158" font-size="11.6" fill="#8A94A6" text-anchor="middle">数据互通共享</text>
+        <text x="443" y="210" font-size="11.4" fill="#8A94A6" text-anchor="middle">无 AI 占比门槛</text>
+        <text x="443" y="240" font-size="11.4" fill="#8A94A6" text-anchor="middle">经营协同管控</text>
+
+        <rect x="604" y="8" width="262" height="256" rx="14" fill="#5B21B6"/>
+        <text x="735" y="40" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">卓越级</text>
+        <text x="735" y="66" font-size="12" fill="#E4D6FB" text-anchor="middle">智能化升级 · 全国标杆</text>
+        <text x="735" y="98" font-size="11.6" fill="#F3EEFD" text-anchor="middle">须已获评先进级</text>
+        <text x="735" y="116" font-size="11.6" fill="#F3EEFD" text-anchor="middle">国内领先水平</text>
+        <rect x="624" y="138" width="222" height="34" rx="8" fill="#fff"/>
+        <text x="735" y="160" font-size="13.5" font-weight="800" fill="#5B21B6" text-anchor="middle">AI 场景占比 ≥ 30%</text>
+        <text x="735" y="226" font-size="11.4" fill="#E4D6FB" text-anchor="middle">需配合现场核查</text>
+        <text x="735" y="244" font-size="11.4" fill="#E4D6FB" text-anchor="middle">与技术推广交流</text>
+
+        <rect x="896" y="0" width="244" height="268" rx="14" fill="#4C1D95"/>
+        <text x="1018" y="36" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">领航级</text>
+        <text x="1018" y="62" font-size="12" fill="#E4D6FB" text-anchor="middle">未来制造 · 全球领先</text>
+        <text x="1018" y="94" font-size="11.6" fill="#F3EEFD" text-anchor="middle">须已获评卓越级</text>
+        <text x="1018" y="112" font-size="11.6" fill="#F3EEFD" text-anchor="middle">行业领军企业</text>
+        <rect x="914" y="132" width="208" height="34" rx="8" fill="#fff"/>
+        <text x="1018" y="154" font-size="13.5" font-weight="800" fill="#4C1D95" text-anchor="middle">AI 场景占比 ≥ 60%</text>
+        <text x="1018" y="226" font-size="11.4" fill="#E4D6FB" text-anchor="middle">须专家答辩</text>
+        <text x="1018" y="244" font-size="11.4" fill="#E4D6FB" text-anchor="middle">本省推荐≤卓越级10%</text>
+
+        <path d="M282 144 L308 144" stroke="#9A7BD0" stroke-width="2.5"/>
+        <path d="M574 146 L600 146" stroke="#9A7BD0" stroke-width="2.5"/>
+        <path d="M866 142 L892 142" stroke="#9A7BD0" stroke-width="2.5"/>
+      </g>
+    </svg>
+    <div class="g2 a" style="height:auto;margin-top:10px">
+      <div class="card"><h4><svg class="ic ic-s"><use href="#i-doc"/></svg>依据与平台</h4><p>行动依据《智能工厂梯度培育管理办法（暂行）》（工信部联通装〔2025〕262号）与《智能工厂梯度培育要素条件（2026年版）》《智能制造典型场景参考指引（2025年版）》。全流程在<b>智能制造数据资源公共服务平台 miit-imps.com</b> 线上申报与审核。</p></div>
+      <div class="card hi"><h4><svg class="ic ic-s"><use href="#i-flag"/></svg>为什么本期重要</h4><p>这是国家级智能化"身份"第一次与<b>AI 渗透率</b>直接挂钩。对工厂而言，过去"上了 MES/SCADA 就算智能工厂"的口径失效；下一步评审看的是<b>AI 场景的真实覆盖比例</b>，以及是否配合现场核查与案例推广。</p></div>
+    </div>
+  </div>
+  <div class="src"><b>来源：</b>工信厅联通装函〔2026〕343号（2026-07-15）；临沂市工信局、山东省工信厅等转发通知（2026-08）；中国机床工具工业协会转载（来源：工信部网站）。</div>
+  <div class="sn">03 / 10</div>
+</section>
+
+<!-- 4 AI场景占比要求 -->
+<section class="slide">
+  <div class="eyebrow">Deep Dive</div>
+  <h2 class="s-title">AI 场景占比 ≥30% / ≥60%：意味着什么</h2>
+  <p class="s-sub">从"有没有 AI"到"AI 覆盖了多少关键场景"——这是两类工厂的分界</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="g2 a" style="height:auto">
+      <div>
+        <div class="card" style="margin-bottom:11px">
+          <h4>卓越级（≥30%）要做什么</h4>
+          <p>"应用人工智能技术场景比例不低于 30%"——指在《智能制造典型场景参考指引》所列场景中，已实际部署 AI（含机器学习、视觉、优化调度、知识图谱等）的场景占全部核心场景的比例≥30%。</p>
+          <p><b>落到车间：</b>质量检测（视觉缺陷识别）、工艺参数优化、排产与调度、设备预测性维护、能源优化、安防巡检等——只要其中约三成关键场景真正用上 AI，即可达标。</p>
+        </div>
+        <div class="card" style="background:#FCF6FB;border-color:#F0C9E6">
+          <h4><svg class="ic ic-s" style="color:#BE185D"><use href="#i-warn"/></svg>领航级（≥60%）的额外要求</h4>
+          <p>领航级须已获评卓越级、为本行业领军企业，AI 场景比例≥60%，且要<b>探索未来制造模式</b>、对外输出新技术/新工艺/新模式。省级推荐数不超过本地累计卓越级的 10%，并须<b>专家答辩</b>——是真正的"塔尖"。</p>
+        </div>
+      </div>
+      <div>
+        <table class="tbl">
+          <tr><th>维度</th><th>卓越级</th><th>领航级</th></tr>
+          <tr><td><b>前置条件</b></td><td>已获评先进级</td><td>已获评卓越级</td></tr>
+          <tr class="em"><td><b>AI 场景占比</b></td><td>≥ 30%</td><td>≥ 60%</td></tr>
+          <tr><td>技术经济指标</td><td>国内同行业领先</td><td>全球领先</td></tr>
+          <tr><td>推荐限额</td><td>按省分档≤20~40</td><td>≤本省卓越级 10%</td></tr>
+          <tr><td>评审方式</td><td>审核 + 可能核查</td><td>审核 + 专家答辩</td></tr>
+          <tr><td>对外义务</td><td>配合推广交流</td><td>输出新模式、引领变革</td></tr>
+        </table>
+        <div class="callout ok" style="margin-top:12px"><svg class="ic ic-s"><use href="#i-check"/></svg><div><b>对中小工厂的建议：</b>先别盯着领航级。把"先进级→卓越级"作为两年目标，先拉一份<b>《核心场景 × 是否用 AI》清单</b>，把视觉质检、排产、预测性维护三类高收益场景做透，即可先冲过 30% 线。</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="src"><b>来源：</b>《智能工厂梯度培育要素条件（2026年版）》；临沂市/山东省工信部门转发通知对卓越级、领航级申报条件的说明（2026-08）。"场景占比"为官方表述的口径解读。</div>
+  <div class="sn">04 / 10</div>
+</section>
+
+<!-- 5 开源大模型密集更新 -->
+<section class="slide">
+  <div class="eyebrow">AI Dynamics</div>
+  <h2 class="s-title">三天内密集开源：三款模型各有主攻</h2>
+  <p class="s-sub">2026年8月12—13日，全球与国产头部模型几乎同步押注"开源 + Agent"</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="tblwrap">
+      <table class="tbl">
+        <tr><th style="width:15%">模型</th><th style="width:18%">发布节点</th><th style="width:24%">规模 / 架构</th><th style="width:20%">主攻能力</th><th style="width:23%">开放与价格</th></tr>
+        <tr><td><b>DeepSeek<br>V4 Pro</b><br><span style="font-size:11px;color:var(--ink-3)">0813 正式版</span></td><td>8/12 结束预览期，转 GA</td><td>1.6 万亿参数 MoE，每 token 激活 49B；百万 token 上下文</td><td>编程 Agent（DeepSWE 62.7%）、推理、长上下文；支持 OpenAI/Anthropic 格式</td><td><b>MIT 开源</b>；API $0.435 / 百万输入、$0.87 / 百万输出</td></tr>
+        <tr class="em"><td><b>Qwen3.8<br>-2.4T<br>-A95B</b><br><span style="font-size:11px;color:var(--ink-3)">阿里</span></td><td>8/13 开放权重<br>（Qwen-Max 级首次开源）</td><td>2.4 万亿参数 MoE，每 token 激活 95B；原生 262K，可扩至 101 万 token</td><td>编程 / 办公 / 科研 / 长周期 Agent；展示连续自主编程约 16 天</td><td>开放权重（HuggingFace / ModelScope）；Qwen3.8-Max API 国内 ¥12/百万输入、¥36/百万输出</td></tr>
+        <tr><td><b>Meta<br>Muse<br>Glimmer</b></td><td>8 月上旬发布</td><td>约 300 亿参数（本地 Agent 优化）</td><td>本地 Agent 工作流：规划→工具调用→自检→故障恢复</td><td>开源；Meta 预告将开放旗舰 Muse Spark 1.2 权重</td></tr>
+      </table>
+    </div>
+    <div class="g2" style="height:auto;margin-top:14px">
+      <div class="card"><h4><svg class="ic ic-s"><use href="#i-bulb"/></svg>共同点：都在抢"Agent 时长"</h4><p>三家都把卖点从"单次问答更强"转向<b>长周期自主完成任务</b>——连续编程十几天、独立复现论文、经营虚拟企业。对工厂意味着：未来"让 AI 接管一段工艺调优或排产闭环"在技术上更接近可用。</p></div>
+      <div class="card hi"><h4><svg class="ic ic-s"><use href="#i-net"/></svg>对制造业落地的含义</h4><p>Qwen3.8 与 DeepSeek V4 Pro 均为<b>开放权重</b>，可本地私有化部署，规避数据出域与调用成本。以 DeepSeek V4 Pro 为例，输出价格约为同期闭源旗舰的七分之一，适合工厂内网跑质检、排产、知识库等场景。</p></div>
+    </div>
+  </div>
+  <div class="src"><b>来源：</b>智东西（2026-08-13）、网易号（2026-08-14）、凤凰网科技 / 腾讯新闻（2026-08-13）；DeepSeek API 文档与 Hugging Face 模型卡；unite.ai、aiexpert.news 对 V4 Pro 0813 的报道。基准分数为厂商自报，部分尚未经第三方独立复现，引用时请标注来源与口径。</div>
+  <div class="sn">05 / 10</div>
+</section>
+
+<!-- 6 中国开源占比 -->
+<section class="slide">
+  <div class="eyebrow">Ecosystem</div>
+  <h2 class="s-title">中国开源占比 41%：首超美国的拐点</h2>
+  <p class="s-sub">Hugging Face《2026年春季全球开源AI生态报告》：中国自研开源模型下载占比达 41%，首次超过美国</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="kpis">
+      <div class="kpi"><div class="n">41%</div><div class="l">中国开源模型下载占比</div><div class="c g">首次超过美国</div></div>
+      <div class="kpi"><div class="n">100亿+</div><div class="l">累计下载量（次）</div><div class="c">全球口径</div></div>
+      <div class="kpi"><div class="n">3 家</div><div class="l">本周密集开源头部厂</div><div class="c">DeepSeek/阿里/Meta</div></div>
+      <div class="kpi"><div class="n">~1/7</div><div class="l">DeepSeek 输出价 vs 闭源旗舰</div><div class="c g">成本优势</div></div>
+    </div>
+    <div class="g2" style="height:auto;margin-top:16px">
+      <div class="card">
+        <h4>行业共识：开源从"追赶者"变"围剿者"</h4>
+        <p>据第一财经报道，过去数周 Kimi K3、智谱 GLM-5.2、MiniMax H3 等国产模型相继迭代，叠加本周三款头部模型密集开源，行业已形成共识：<b>开源模型已从过去的"追赶者"角色，转变为对闭源模型的"围剿者"</b>。Counterpoint 指出，若西方巨头只顾构建封闭"围墙花园"，开发者与企业会自然转向中国的开放权重模型。</p>
+      </div>
+      <div class="card hi">
+        <h4><svg class="ic ic-s"><use href="#i-flag"/></svg>对工厂的两条实在结论</h4>
+        <p><b>① 选型更自主：</b>需要数据不出厂的场景，可优先评估 Qwen3.8 / DeepSeek V4 Pro 的本地部署，规避合规与单价风险。<br><b>② 警惕"厂商榜"：</b>Qwen3.8 的"仅次于 Fable 5"等排名为<b>厂商自述、未第三方复现</b>，做采购决策应以本厂实测为准，别把营销话术当规格书。</p>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:14px"><svg class="ic ic-s"><use href="#i-warn"/></svg><div><b>引用规范：</b>"中国 41% 首超美国"出自 Hugging Face《2026年春季全球开源AI生态报告》；各模型基准为厂商自报、部分未独立复现。对外引用请连同来源、日期与"厂商自报"口径一并标注。</div></div>
+  </div>
+  <div class="src"><b>来源：</b>Hugging Face《2026年春季全球开源AI生态报告》；第一财经（2026-08-13）《开源"围剿"闭源，中国大模型掀翻硅谷定价逻辑》；网易号转载智东西报道（2026-08-14）。</div>
+  <div class="sn">06 / 10</div>
+</section>
+
+<!-- 7 工厂落地路径 -->
+<section class="slide">
+  <div class="eyebrow">Action Path</div>
+  <h2 class="s-title">从"看懂政策"到"工厂落地"：四步路径</h2>
+  <p class="s-sub">把梯度培育的硬指标翻译成这周就能启动的动作</p>
+  <div class="hr"></div>
+  <div class="body">
+    <ul class="bl">
+      <li><span class="num">1</span><div><b>盘点场景，做"AI 渗透率"台账。</b>对照《智能制造典型场景参考指引（2025年版）》，把本厂核心场景（质检、排产、设备、能源、安环等）逐条标记"已用 AI / 部分用 / 未用"，先算出当前占比。这是申报卓越级前的第一张底牌。</div></li>
+      <li><span class="num">2</span><div><b>选 3 个高收益场景做透，先冲 30%。</b>视觉质检（缺陷识别）、排产调度优化、设备预测性维护是投入产出比最高的三类；用开源模型本地部署验证，避免一次性重投入。先到 30% 再谈更高。</div></li>
+      <li><span class="num">3</span><div><b>赶申报节奏。</b>目标先进级/卓越级的，关注本省工信部门转发通知的<b>具体名额与截止</b>（中央口径 8/15 申报、9/1 推荐，省级可能更早截）；材料提前一周备齐，别卡点。</div></li>
+      <li><span class="num">4</span><div><b>建"能核查"的证据链。</b>卓越级/领航级都要现场核查与案例推广。把每个 AI 场景的<b>上线时间、覆盖范围、量化收益（良率/停机/能耗）</b>留痕，避免评审时"有系统无证据"。</div></li>
+    </ul>
+    <div class="callout ok" style="margin-top:14px"><svg class="ic ic-s"><use href="#i-check"/></svg><div><b>一句话：</b>智能工厂的"国字号"不再看你是否买了系统，而看你<b>有多少关键场景真的跑在 AI 上</b>、且能拿出证据。本周先做第 1 步那张台账。</div></div>
+  </div>
+  <div class="src"><b>说明：</b>路径为基于本期政策的落地建议，具体申报条件以本省工信部门转发通知与本厂实际情况为准；涉及投资与改造须过内部合规与预算流程。</div>
+  <div class="sn">07 / 10</div>
+</section>
+
+<!-- 8 趋势预测 -->
+<section class="slide">
+  <div class="eyebrow">Outlook</div>
+  <h2 class="s-title">趋势预测：未来 1-3 个月看四个变量</h2>
+  <p class="s-sub">预测为基于公开数据的个人判断，非官方结论，请结合自身业务验证。</p>
+  <div class="hr"></div>
+  <div class="body">
+    <ul class="bl dot">
+      <li><span class="num">A</span><div><b>省级名额会很快分完。</b>前10名工业大省≤40个、其余≤20个，且需 9/1 前完成推荐。若你所在省是制造大省，<b>8月底前不提交基本等于错过本年度窗口</b>。观察指标：本省工信厅转发通知的截止日与剩余名额。</div></li>
+      <li><span class="num">B</span><div><b>"AI 场景占比"会催生一批评估工具。</b>30%/60% 的硬线需要可量化、可核查的口径，预计会出现第三方评估与软件化自评工具。<b>观察指标：</b>工信部要素条件是否出台配套计算细则、平台是否上线自动统计。</div></li>
+      <li><span class="num">C</span><div><b>开源模型会更快进入工厂内网。</b>Qwen3.8 / DeepSeek V4 Pro 开放权重 + 成本仅闭源 1/7，叠加"数据不出厂"刚需，<b>本地私有化部署的 PoC 会明显增加</b>。观察指标：国产推理框架（SGLang/vLLM）对这两款的官方 Recipe 成熟度。</div></li>
+      <li><span class="num">D</span><div><b>闭源继续靠"Agent 时长"防守。</b>当开源能在本地跑通长周期任务，闭源旗舰的溢价空间被压缩。<b>观察指标：</b>各厂"连续自主完成任务"的第三方评测（而非厂商自报）是否出现。</div></li>
+    </ul>
+  </div>
+  <div class="src"><b>方法说明：</b>结论基于本期所引官方与权威媒体报道推演，不含未公开信息；涉及企业决策的部分仅代表个人观点，不构成投资建议。</div>
+  <div class="sn">08 / 10</div>
+</section>
+
+<!-- 9 清单 -->
+<section class="slide">
+  <div class="eyebrow">Checklist</div>
+  <h2 class="s-title">一页带走：本周可执行清单</h2>
+  <p class="s-sub">打印出来贴在办公桌上，做完一项划掉一项。</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="g2" style="height:auto">
+      <div class="card">
+        <h4><svg class="ic ic-s"><use href="#i-ai"/></svg>智能工厂侧（4 项）</h4>
+        <ul class="bl dot" style="gap:9px">
+          <li><span class="num">1</span><div>对照《典型场景参考指引》做<b>核心场景 × 是否用 AI</b> 台账，算出当前 AI 渗透率。</div></li>
+          <li><span class="num">2</span><div>选 <b>视觉质检 / 排产 / 预测性维护</b> 三类做透，先冲 30% 线。</div></li>
+          <li><span class="num">3</span><div>查本省工信厅转发通知的<b>名额与截止</b>，目标先进级/卓越级的本周启动材料。</div></li>
+          <li><span class="num">4</span><div>给每个 AI 场景建<b>证据链</b>：上线时间、覆盖范围、量化收益（良率/停机/能耗）。</div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><svg class="ic ic-s"><use href="#i-net"/></svg>技术选型侧（4 项）</h4>
+        <ul class="bl dot" style="gap:9px">
+          <li><span class="num">5</span><div>数据不出厂场景，评估 <b>Qwen3.8 / DeepSeek V4 Pro 本地部署</b> 的可行性。</div></li>
+          <li><span class="num">6</span><div>跑一个<b>小范围 PoC</b>（如质检视觉）验证开源模型效果，再谈规模化。</div></li>
+          <li><span class="num">7</span><div>所有模型基准引用，一律标注<b>"厂商自报 / 待第三方复现"</b> 口径。</div></li>
+          <li><span class="num">8</span><div>本周对外数据/结论，统一附<b>来源 + 日期 + 口径</b> 三件套。</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout ok" style="margin-top:15px"><svg class="ic ic-s"><use href="#i-check"/></svg><div><b>如果只做一件：</b>做第 1 项那张 AI 渗透率台账。不知道自己现在的占比，后面所有申报与投入都是盲打。</div></div>
+  </div>
+  <div class="src"><b>使用建议：</b>清单按"当周可完成"设计；涉及投资与改造须先过内部合规、预算与信息安全流程。</div>
+  <div class="sn">09 / 10</div>
+</section>
+
+<!-- 10 来源 -->
+<section class="slide">
+  <div class="eyebrow">References</div>
+  <h2 class="s-title">本期来源清单</h2>
+  <p class="s-sub">所有数据均可回溯到下列原始发布；媒体转述均标注媒体与日期。</p>
+  <div class="hr"></div>
+  <div class="body">
+    <div class="srclist">
+      <div class="srci"><strong>工业和信息化部等六部门</strong>《关于开展2026年度智能工厂梯度培育行动的通知》（工信厅联通装函〔2026〕343号），2026-07-15 印发。四级培育、AI 场景占比、申报/推荐节点、分档名额均出自该文及各地转发通知。</div>
+      <div class="srci"><strong>《智能工厂梯度培育要素条件（2026年版）》/《智能制造典型场景参考指引（2025年版）》</strong>卓越级（AI≥30%）、领航级（AI≥60%）申报条件的技术依据。</div>
+      <div class="srci"><strong>阿里云 ModelScope / Hugging Face</strong>Qwen3.8-2.4T-A95B 权重开放说明（2026-08-13）；智东西、网易号等报道。</div>
+      <div class="srci"><strong>DeepSeek</strong>V4 Pro 0813 正式版 API 文档与 Hugging Face 模型卡（2026-08-12）；unite.ai、aiexpert.news 报道。</div>
+      <div class="srci"><strong>Hugging Face</strong>《2026年春季全球开源AI生态报告》：中国开源模型下载占比 41%，首次超过美国，累计下载破 100 亿次。</div>
+      <div class="srci"><strong>第一财经 / 网易号（智东西）</strong>《开源"围剿"闭源，中国大模型掀翻硅谷定价逻辑》（2026-08-13）；Meta Muse Glimmer、Kimi K3、GLM-5.2、MiniMax H3 等动态。</div>
+    </div>
+    <div class="callout" style="margin-top:14px"><svg class="ic ic-s"><use href="#i-warn"/></svg><div><b>引用规范：</b>政策数据以工信部原文及各省转发通知为准；模型基准多为厂商自报、部分未第三方复现，引用须标注"厂商自报"口径。本田相关对比见本站行业信息板块第001期。</div></div>
+  </div>
+  <div class="src"><b>WKing 周报</b> · 智能技术板块 · 第001期 · 2026-08-17 08:00 发布 · 下期预计 2026-08-24 08:00</div>
+  <div class="sn">10 / 10</div>
+</section>
+
+</div></div>
+
+<div id="pbar"></div>
+<div class="bar bot">
+  <span style="font-size:12.3px;color:var(--ink-3)" id="botTxt">键盘 ← → 翻页，F 全屏，Esc 退出</span>
+  <span class="sp"></span>
+  <div class="navb" style="display:flex;align-items:center;gap:8px">
+    <button class="cbtn" id="prev"><svg class="ic ic-s"><use href="#i-l"/></svg></button>
+    <span class="pg" id="pg">1 / 10</span>
+    <button class="cbtn" id="next"><svg class="ic ic-s"><use href="#i-r"/></svg></button>
+  </div>
+</div>
+
+<div class="mask" id="mask"></div>
+<aside class="toc" id="toc">
+  <div class="toc-h"><h3>本期目录</h3><button class="cbtn" id="tocClose"><svg class="ic ic-s"><use href="#i-x"/></svg></button></div>
+  <div class="toc-b" id="tocB"></div>
+</aside>
+
+<script>
+var TITLES=['封面 · 本期主题','本期速览：5 条结论','智能工厂四级梯度培育','AI 场景占比 ≥30%/≥60%','三天内密集开源的三款模型','中国开源占比 41% 首超美国','从政策到落地的四步路径','趋势预测：四个变量','一页带走：本周清单','本期来源清单'];
+var S=[].slice.call(document.querySelectorAll('.slide')),i=0,N=S.length;
+var $=function(s){return document.querySelector(s);};
+function isDoc(){ return document.body.classList.contains('doc'); }
+function fit(){
+  if(isDoc()){ $('#stage').style.transform=''; return; }
+  var vp=$('.viewport'), s=Math.min((vp.clientWidth-32)/1280,(vp.clientHeight-32)/720);
+  $('#stage').style.transform='scale('+s+')';
+}
+function go(n){
+  if(n<0)n=0; if(n>N-1)n=N-1; i=n;
+  if(isDoc()){ S[i].scrollIntoView({behavior:'smooth',block:'start'}); }
+  else { S.forEach(function(el,k){ el.classList.toggle('on',k===i); }); }
+  $('#pg').textContent=(i+1)+' / '+N;
+  $('#pbar').style.width=((i+1)/N*100)+'%';
+  [].slice.call(document.querySelectorAll('.ti')).forEach(function(t,k){ t.classList.toggle('on',k===i); });
+}
+$('#prev').onclick=function(){ go(i-1); };
+$('#next').onclick=function(){ go(i+1); };
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); go(i+1); }
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); go(i-1); }
+  else if(e.key==='Home'){ go(0); } else if(e.key==='End'){ go(N-1); }
+  else if(e.key==='f'||e.key==='F'){ toggleFs(); }
+  else if(e.key==='Escape'){ closeToc(); }
+});
+var tx=0,ty=0;
+document.addEventListener('touchstart',function(e){ tx=e.touches[0].clientX; ty=e.touches[0].clientY; },{passive:true});
+document.addEventListener('touchend',function(e){
+  if(isDoc())return;
+  var dx=e.changedTouches[0].clientX-tx, dy=e.changedTouches[0].clientY-ty;
+  if(Math.abs(dx)>52&&Math.abs(dx)>Math.abs(dy)) go(dx<0?i+1:i-1);
+},{passive:true});
+$('#tocB').innerHTML=TITLES.map(function(t,k){ return '<div class="ti'+(k===0?' on':'')+'" data-k="'+k+'"><span class="i">'+(k+1)+'</span><span>'+t+'</span></div>'; }).join('');
+[].slice.call(document.querySelectorAll('.ti')).forEach(function(t){ t.onclick=function(){ go(+t.dataset.k); closeToc(); }; });
+function openToc(){ $('#toc').classList.add('on'); $('#mask').classList.add('on'); }
+function closeToc(){ $('#toc').classList.remove('on'); $('#mask').classList.remove('on'); }
+$('#tocBtn').onclick=openToc; $('#tocClose').onclick=closeToc; $('#mask').onclick=closeToc;
+function toggleFs(){ if(!document.fullscreenElement){ (document.documentElement.requestFullscreen||function(){})(); } else if(document.exitFullscreen){ document.exitFullscreen(); } }
+$('#fsBtn').onclick=toggleFs;
+$('#prBtn').onclick=function(){ var d=isDoc(); if(d) document.body.classList.remove('doc'); setTimeout(function(){ window.print(); if(d) document.body.classList.add('doc'); },120); };
+function setMode(doc){
+  document.body.classList.toggle('doc',doc);
+  $('#modeTxt').textContent=doc?'翻页模式':'阅读模式';
+  $('#botTxt').textContent=doc?'上下滚动连续阅读，可切回翻页模式':'键盘 ← → 翻页，F 全屏，Esc 退出';
+  if(!doc){ S.forEach(function(el,k){ el.classList.toggle('on',k===i); }); }
+  fit();
+}
+$('#modeBtn').onclick=function(){ setMode(!isDoc()); };
+[].slice.call(document.querySelectorAll('table.tbl')).forEach(function(t){
+  if(t.parentNode.className==='tblwrap') return;
+  var w=document.createElement('div'); w.className='tblwrap';
+  t.parentNode.insertBefore(w,t); w.appendChild(t);
+});
+window.addEventListener('resize',fit);
+setMode(window.innerWidth<900);
+fit(); go(0);
+</script>
+</body>
+</html>
